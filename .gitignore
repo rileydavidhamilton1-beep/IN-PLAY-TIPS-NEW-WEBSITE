@@ -23,3 +23,6 @@ var[0-9].png
 v5-overview.png
 test-*.png
 variations-preview*.png
+build_alt.py
+shotalt.mjs
+alt-*.png
