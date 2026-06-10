@@ -16,3 +16,10 @@ crop-*.png
 iphone-*.png
 phone-*.png
 v[0-9].png
+build5.py
+shot5.mjs
+test5.mjs
+var[0-9].png
+v5-overview.png
+test-*.png
+variations-preview*.png
