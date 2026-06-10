@@ -7,8 +7,12 @@ build.py
 shot.mjs
 shot2.mjs
 iphone.mjs
+frames.mjs
+mockup.py
 package.json
 package-lock.json
 preview-*.png
 crop-*.png
 iphone-*.png
+phone-*.png
+v[0-9].png
