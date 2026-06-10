@@ -1,0 +1,12 @@
+# Working files / build artifacts (not part of the deliverable)
+node_modules/
+assets/
+source.html
+fonts.css
+build.py
+shot.mjs
+shot2.mjs
+package.json
+package-lock.json
+preview-*.png
+crop-*.png
