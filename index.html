@@ -54,10 +54,12 @@ h1,h2,h3,.head{font-family:var(--head);font-weight:400;text-transform:uppercase;
   border:1px solid transparent;transition:transform .15s ease,filter .15s ease}
 .btn:active{transform:translateY(1px)}
 .btn-primary{background:linear-gradient(180deg,var(--soft-gold2),var(--gold));color:#1a1410;
+  outline:2px solid var(--gold);outline-offset:3px;
   box-shadow:0 8px 24px rgba(255,205,7,.22)}
 .btn-primary:hover{filter:brightness(1.05)}
-.btn-ghost{background:rgba(255,255,255,.02);border-color:var(--border);color:var(--white)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--soft-gold)}
+.btn-ghost{background:rgba(10,8,14,.55);border:1.5px solid var(--gold);color:var(--gold);
+  outline:2px solid var(--gold);outline-offset:3px}
+.btn-ghost:hover{filter:brightness(1.1)}
 
 /* ---------- Header ---------- */
 .header{position:sticky;top:0;z-index:50;background:rgba(15,11,18,.78);
@@ -123,12 +125,12 @@ section{padding:34px 0}
 .about p{color:var(--muted);font-size:14px;margin-top:6px}
 
 /* ---------- Feature row ---------- */
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.feature{background:var(--panel);border:1px solid var(--border);border-radius:18px;
-  padding:18px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
-.feature img{width:44px;height:44px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.feature{background:var(--panel);border:1px solid var(--border);border-radius:14px;
+  padding:12px 6px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:7px}
+.feature img{width:34px;height:34px}
 .feature span{font-family:var(--body);font-weight:500;text-transform:uppercase;
-  letter-spacing:.04em;font-size:11px;color:var(--soft-gold);line-height:1.25}
+  letter-spacing:.02em;font-size:9.5px;color:var(--soft-gold);line-height:1.2}
 
 /* ---------- Dual phones ---------- */
 .phones{padding-top:8px}
