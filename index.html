@@ -50,15 +50,16 @@ h1,h2,h3,.head{font-family:var(--head);font-weight:400;text-transform:uppercase;
 /* ---------- Buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   font-family:var(--body);font-weight:500;text-transform:uppercase;letter-spacing:.04em;
-  font-size:14px;border-radius:12px;padding:0 22px;height:52px;width:100%;cursor:pointer;
-  border:1px solid transparent;transition:transform .15s ease,filter .15s ease}
+  font-size:14px;border-radius:8px;padding:0 22px;height:52px;width:100%;cursor:pointer;
+  position:relative;overflow:hidden;border:2px solid transparent;
+  outline:3px solid;outline-offset:-5px;
+  transition:transform .15s ease,filter .15s ease}
 .btn:active{transform:translateY(1px)}
-.btn-primary{background:linear-gradient(180deg,var(--soft-gold2),var(--gold));color:#1a1410;
-  border:1.5px solid var(--gold);outline:2px solid var(--gold);outline-offset:4px;
-  box-shadow:0 8px 24px rgba(255,205,7,.22)}
+.btn-primary{background:#ffcd07;color:#1f1726;border-color:#ffcd07;outline-color:#252129;
+  box-shadow:0 0 60px 0 rgba(255,205,7,.2)}
 .btn-primary:hover{filter:brightness(1.05)}
-.btn-ghost{background:#181221;border:1.5px solid var(--gold);color:var(--gold);
-  outline:2px solid var(--gold);outline-offset:4px}
+.btn-ghost{background:#1f1726;color:#ffcd07;border-color:#ffcd07;outline-color:#1f1726;
+  box-shadow:0 0 60px 0 rgba(255,205,7,.2)}
 .btn-ghost:hover{filter:brightness(1.1)}
 
 /* ---------- Header ---------- */
@@ -93,7 +94,7 @@ section{padding:34px 0}
 .hero-inner{position:relative;z-index:2}
 .hero h1{font-size:50px;margin:14px 0 22px}
 .hero-btns{display:flex;flex-direction:column;gap:14px;margin-bottom:8px}
-.hero-btns .btn{border-radius:16px;height:56px}
+.hero-btns .btn{border-radius:8px;height:58px;font-size:15px}
 .hero-players{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:center;
   gap:0;margin-top:18px;padding-bottom:46px}
 .hero-players img{height:200px;width:auto;object-fit:contain;
