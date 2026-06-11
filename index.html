@@ -132,6 +132,16 @@ section{padding:34px 0}
 .stat-ico{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(255,205,7,.6)}
 .stat-val{font-family:var(--head);font-size:22px;color:var(--white)}
 .stat-val.pos{color:var(--gold)}
+/* ---------- HERO STAT STRIP ---------- */
+.statstrip{display:flex;align-items:stretch;background:var(--panel);border:1px solid var(--border);
+  border-radius:20px;padding:18px 4px;margin-top:18px}
+.statstrip .ss-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:7px;padding:0 6px;text-align:center}
+.statstrip .ss-item + .ss-item{border-left:1px solid var(--border)}
+.statstrip .ss-val{font-family:var(--head);font-size:30px;line-height:1;color:var(--white)}
+.statstrip .ss-val.pos{color:var(--gold)}
+.statstrip .ss-label{font-family:var(--body);font-weight:500;text-transform:uppercase;
+  letter-spacing:.1em;font-size:11px;color:var(--muted);line-height:1.2}
 
 /* ---------- Graph + tabs ---------- */
 .tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;
@@ -247,6 +257,13 @@ section{padding:34px 0}
       </div>
     </div>
   </section>
+
+  <!-- Hero stat strip -->
+  <div class="statstrip">
+    <div class="ss-item"><span class="ss-val">1,708</span><span class="ss-label">Tips</span></div>
+    <div class="ss-item"><span class="ss-val">78.42%</span><span class="ss-label">Hit Rate</span></div>
+    <div class="ss-item"><span class="ss-val pos">782.41</span><span class="ss-label">Units Profit</span></div>
+  </div>
 
   <!-- 3. WHAT WE DO -->
   <section class="about">
