@@ -23,16 +23,15 @@
 html{-webkit-text-size-adjust:100%}
 body{
   font-family:var(--body); color:var(--white); background-color:var(--base);
-  background-image:
-    radial-gradient(125% 62% at 50% -6%, rgba(254,110,0,.30), rgba(254,110,0,0) 62%),
-    linear-gradient(90deg, rgba(251,146,60,.06) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(251,146,60,.06) 1px, transparent 1px);
-  background-size: 100% 680px, 64px 64px, 64px 64px;
-  background-position: top center, 0 0, 0 0;
-  background-repeat: no-repeat, repeat, repeat;
-  background-attachment: scroll;
+  position:relative;
   line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden;
 }
+/* ---------- SITE BACKGROUND (layered) ---------- */
+.site-bg{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.site-bg .l1{position:absolute;inset:0;background:linear-gradient(to bottom right, rgba(68,19,6,.10), #0c0a09 50%, #0c0a09)}
+.site-bg .l2{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(68,19,6,.20), #0c0a09 50%, rgba(68,19,6,.10))}
+.site-bg .glow{position:absolute;top:80px;right:40px;width:192px;height:192px;border-radius:9999px;filter:blur(64px);background:linear-gradient(to bottom right, rgba(254,110,0,.20), rgba(240,81,0,.10))}
+.site-bg .grid{position:absolute;inset:0;background-image:linear-gradient(to right,#fb923c04 1px,transparent 1px),linear-gradient(to bottom,#fb923c04 1px,transparent 1px);background-size:64px 64px}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{width:100%;max-width:520px;margin:0 auto;padding:0 16px}
@@ -229,6 +228,14 @@ section{padding:34px 0}
 </style>
 </head>
 <body>
+
+<!-- Layered site background -->
+<div class="site-bg" aria-hidden="true">
+  <div class="l1"></div>
+  <div class="l2"></div>
+  <div class="glow"></div>
+  <div class="grid"></div>
+</div>
 
 <!-- 1. HEADER -->
 <header class="header">
