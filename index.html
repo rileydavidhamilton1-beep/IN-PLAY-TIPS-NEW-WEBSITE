@@ -172,6 +172,18 @@ section{padding:34px 0}
 .marquee__track strong{color:var(--gold);font-weight:700}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
+/* ---------- RETURNS CALCULATOR + SIGN UP ---------- */
+.calc-box{margin-top:14px;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px 16px}
+.calc-h{font-size:22px;margin-bottom:14px}
+.calc-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.calc-row label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.calc-input{display:flex;align-items:center;background:rgba(0,0,0,.4);border:1px solid var(--border);border-radius:10px;padding:0 12px;height:44px}
+.calc-input span{color:var(--muted)}
+.calc-input input{background:none;border:0;color:var(--white);font-size:16px;width:96px;outline:none;font-family:var(--body)}
+.calc-returns{font-size:15px;color:var(--white);margin-bottom:16px}
+.calc-returns strong{color:var(--gold);font-size:24px;font-family:var(--head);letter-spacing:.01em}
+.calc-note{color:var(--muted);font-size:11px;margin-top:12px;line-height:1.4}
+
 /* ---------- Graph + tabs ---------- */
 .tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;
   scrollbar-width:none}
@@ -316,6 +328,26 @@ section{padding:34px 0}
       </div>
     </div>
   </div>
+
+  <!-- Returns calculator + Sign Up (illustrative — set your own average) -->
+  <div class="calc-box">
+    <h3 class="calc-h">Annual returns calculator</h3>
+    <div class="calc-row">
+      <label for="unit">Unit size</label>
+      <div class="calc-input"><span>$</span><input id="unit" type="number" inputmode="numeric" min="0" value="100"></div>
+    </div>
+    <div class="calc-returns">Estimated annual returns: <strong id="calc-out">$0</strong></div>
+    <button class="btn btn-primary" type="button">Sign up</button>
+    <p class="calc-note">Illustrative estimate only, based on your unit size and our average units per year. Betting involves risk and past performance does not guarantee future results.</p>
+  </div>
+  <script>
+  (function(){
+    var UNITS_PER_YEAR = 550; /* PLACEHOLDER: set to In Play Tips' real average annual units */
+    var u=document.getElementById('unit'), out=document.getElementById('calc-out');
+    function calc(){var v=parseFloat(u.value)||0; out.textContent='$'+Math.round(v*UNITS_PER_YEAR).toLocaleString('en-US');}
+    if(u){u.addEventListener('input',calc); calc();}
+  })();
+  </script>
 
   <!-- 3. WHAT WE DO -->
   <section class="about">
