@@ -54,11 +54,11 @@ h1,h2,h3,.head{font-family:var(--head);font-weight:400;text-transform:uppercase;
   border:1px solid transparent;transition:transform .15s ease,filter .15s ease}
 .btn:active{transform:translateY(1px)}
 .btn-primary{background:linear-gradient(180deg,var(--soft-gold2),var(--gold));color:#1a1410;
-  outline:2px solid var(--gold);outline-offset:3px;
+  border:1.5px solid var(--gold);outline:2px solid var(--gold);outline-offset:4px;
   box-shadow:0 8px 24px rgba(255,205,7,.22)}
 .btn-primary:hover{filter:brightness(1.05)}
-.btn-ghost{background:rgba(10,8,14,.55);border:1.5px solid var(--gold);color:var(--gold);
-  outline:2px solid var(--gold);outline-offset:3px}
+.btn-ghost{background:#181221;border:1.5px solid var(--gold);color:var(--gold);
+  outline:2px solid var(--gold);outline-offset:4px}
 .btn-ghost:hover{filter:brightness(1.1)}
 
 /* ---------- Header ---------- */
@@ -92,7 +92,8 @@ section{padding:34px 0}
   pointer-events:none}
 .hero-inner{position:relative;z-index:2}
 .hero h1{font-size:50px;margin:14px 0 22px}
-.hero-btns{display:flex;flex-direction:column;gap:12px;margin-bottom:8px}
+.hero-btns{display:flex;flex-direction:column;gap:14px;margin-bottom:8px}
+.hero-btns .btn{border-radius:16px;height:56px}
 .hero-players{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:center;
   gap:0;margin-top:18px;padding-bottom:46px}
 .hero-players img{height:200px;width:auto;object-fit:contain;
@@ -270,8 +271,8 @@ section{padding:34px 0}
         <span class="eyebrow">In&nbsp;Play&nbsp;Tips</span>
         <h1>Australia's Sharpest Betting Insight</h1>
         <div class="hero-btns">
-          <button class="btn btn-primary" type="button">Sign up here</button>
-          <button class="btn btn-ghost" type="button">View our results</button>
+          <button class="btn btn-primary" type="button">Sign up</button>
+          <button class="btn btn-ghost" type="button">Our results</button>
         </div>
       </div>
       <div class="hero-players">
