@@ -271,6 +271,40 @@ section{padding:34px 0}
   .features{gap:18px} .feature img{width:52px;height:52px}
   .phones img{max-width:420px}
 }
+/* ---------- Trust strip ---------- */
+.trust{margin-top:14px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--deep);padding:12px 0}
+.trust-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px}
+.trust-item{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.trust-item::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(255,205,7,.6)}
+/* ---------- Packages ---------- */
+.pkg-grid{display:flex;flex-direction:column;gap:16px;margin-top:6px}
+.pkg-card{position:relative;background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:20px 18px}
+.pkg-card.feat{border-color:var(--gold);box-shadow:0 0 40px rgba(255,205,7,.12)}
+.pkg-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1f1726;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:4px 12px;border-radius:999px;white-space:nowrap}
+.pkg-name{font-family:var(--body);text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--muted)}
+.pkg-price{font-family:var(--head);font-size:34px;margin:6px 0 2px;color:var(--white)}
+.pkg-price small{font-family:var(--body);font-size:13px;color:var(--muted)}
+.pkg-feats{list-style:none;margin:14px 0 18px;padding:0;display:flex;flex-direction:column;gap:9px}
+.pkg-feats li{position:relative;padding-left:22px;color:var(--white);font-size:13px}
+.pkg-feats li::before{content:"";position:absolute;left:0;top:4px;width:13px;height:13px;border-radius:50%;background:var(--gold)}
+.pkg-feats li::after{content:"";position:absolute;left:4px;top:7px;width:4px;height:2px;border-left:1.5px solid #1f1726;border-bottom:1.5px solid #1f1726;transform:rotate(-45deg)}
+/* ---------- FAQ ---------- */
+.faq{margin-top:6px;display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:14px 16px;font-family:var(--body);font-weight:500;font-size:14px;color:var(--white);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{padding:0 16px 14px;color:var(--muted);font-size:13px;line-height:1.5}
+.gamble-line{margin-top:16px;color:var(--muted);font-size:11px;text-align:center;line-height:1.5}
+/* ---------- Sticky mobile CTA ---------- */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(12,10,9,0),rgba(12,10,9,.94) 32%);transform:translateY(130%);transition:transform .25s ease;pointer-events:none}
+.sticky-cta.show{transform:translateY(0);pointer-events:auto}
+@media(min-width:760px){.sticky-cta{display:none}}
+/* ---------- Section dividers + scroll reveal ---------- */
+.about,#performance,.skeptical,#packages,.faq-section{border-top:1px solid var(--border)}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
@@ -348,6 +382,16 @@ section{padding:34px 0}
     if(u){u.addEventListener('input',calc); calc();}
   })();
   </script>
+
+  <!-- Trust strip -->
+  <section class="trust">
+    <div class="trust-inner">
+      <span class="trust-item">Verified results</span>
+      <span class="trust-item">78%+ hit rate</span>
+      <span class="trust-item">Cancel anytime</span>
+      <span class="trust-item">AU-based team</span>
+    </div>
+  </section>
 
   <!-- 3. WHAT WE DO -->
   <section class="about">
@@ -460,6 +504,46 @@ section{padding:34px 0}
     </div>
   </section>
 
+  <!-- Packages -->
+  <section id="packages">
+    <div class="section-head"><h2>Packages</h2>
+      <p class="lead">Choose your plan. Prices are placeholders &mdash; set your real pricing.</p>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <div class="pkg-name">Monthly</div>
+        <div class="pkg-price">$PRICE<small>/mo</small></div>
+        <ul class="pkg-feats"><li>VIP Discord access</li><li>Daily tips</li><li>Bet tracker</li></ul>
+        <button class="btn btn-primary" type="button">Sign up</button>
+      </div>
+      <div class="pkg-card feat">
+        <span class="pkg-badge">Most popular</span>
+        <div class="pkg-name">Quarterly</div>
+        <div class="pkg-price">$PRICE<small>/qtr</small></div>
+        <ul class="pkg-feats"><li>Everything in Monthly</li><li>Priority support</li><li>Save vs monthly</li></ul>
+        <button class="btn btn-primary" type="button">Sign up</button>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-name">Annual</div>
+        <div class="pkg-price">$PRICE<small>/yr</small></div>
+        <ul class="pkg-feats"><li>Everything in Quarterly</li><li>Best value</li><li>Locked-in rate</li></ul>
+        <button class="btn btn-primary" type="button">Sign up</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-head"><h2>FAQ</h2></div>
+    <div class="faq">
+      <details><summary>How do I get the tips?</summary><p>Via the VIP Discord / app once you join. (Placeholder &mdash; confirm your delivery method.)</p></details>
+      <details><summary>What bankroll do I need to start?</summary><p>Tips are given in units, so it scales to any bankroll. (Placeholder.)</p></details>
+      <details><summary>Can I cancel anytime?</summary><p>Yes &mdash; cancel in under a minute, no lock-in. (Placeholder.)</p></details>
+      <details><summary>Is this gambling advice?</summary><p>We share research-based tips for entertainment only. Bet responsibly and only what you can afford to lose. (Placeholder &mdash; add your own wording.)</p></details>
+    </div>
+    <p class="gamble-line">18+. Gamble responsibly. For free, confidential support call Gambling Help 1800 858 858 or visit gamblinghelponline.org.au</p>
+  </section>
+
 </main>
 
 <!-- 11. FOOTER -->
@@ -483,6 +567,27 @@ section{padding:34px 0}
     <div class="footer-bottom"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAzNCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3LjQxOCAwSDBWNDhMNy4wNDk4MiA0Mi41MjY3VjUuNDcyNzRIMTMuNjIwNlYxMy42MDY2SDIwLjcwNjdWNS40NzI3NEgyNy4yMzM3VjI2LjU2MDRIMjAuNzA2N1YxOS43MzJIMTMuNTcwNFYzMi40MzQ4SDI3LjQxODJDMzAuNzI3MSAzMi40MzQ4IDMzLjQwOTUgMjkuNzUyNCAzMy40MDk1IDI2LjQ0MzVWNS45OTEyN0MzMy40MDk1IDIuNjgyMzcgMzAuNzI3MSAwIDI3LjQxODIgMEgyNy40MThaIiBmaWxsPSIjRkZDRDA3Ii8+Cjwvc3ZnPgo=" alt="logo"></div>
   </div>
 </footer>
+
+<!-- Sticky mobile sign-up bar -->
+<div class="sticky-cta"><button class="btn btn-primary" type="button">Sign up</button></div>
+
+<script>
+/* Scroll reveal for sections below the hero + sticky mobile CTA */
+(function(){
+  var hero=document.querySelector('.hero');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('main section'),function(s){
+      if(s===hero) return; s.classList.add('reveal'); io.observe(s);
+    });
+  }
+  var sticky=document.querySelector('.sticky-cta');
+  if(sticky&&hero){
+    var onScroll=function(){ sticky.classList.toggle('show', hero.getBoundingClientRect().bottom<0); };
+    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  }
+})();
+</script>
 
 <script>
 /* Performance equity curve (placeholder cumulative-unit data — replace with real figures) */
