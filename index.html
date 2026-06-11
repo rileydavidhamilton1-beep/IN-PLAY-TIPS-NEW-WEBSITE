@@ -160,6 +160,18 @@ section{padding:34px 0}
 .statstrip .ss-label{font-family:var(--body);font-weight:500;text-transform:uppercase;
   letter-spacing:.1em;font-size:11px;color:var(--muted);line-height:1.2}
 
+/* ---------- LIVE RESULTS MARQUEE ---------- */
+.marquee-box{margin-top:14px;background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden;padding:12px 0}
+.marquee-title{font-family:var(--body);font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:var(--muted);padding:0 16px 9px}
+.marquee{position:relative;overflow:hidden;white-space:nowrap;
+  -webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.marquee__track{display:inline-flex;align-items:center;animation:marquee 38s linear infinite}
+.marquee__track span{display:inline-flex;align-items:center;gap:7px;padding:0 18px;font-family:var(--body);font-size:13px;color:var(--white)}
+.marquee__track span + span{border-left:1px solid var(--border)}
+.marquee__track strong{color:var(--gold);font-weight:700}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
 /* ---------- Graph + tabs ---------- */
 .tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;
   scrollbar-width:none}
@@ -292,6 +304,17 @@ section{padding:34px 0}
     <div class="ss-item"><span class="ss-val">1,708</span><span class="ss-label">Tips</span></div>
     <div class="ss-item"><span class="ss-val">78.42%</span><span class="ss-label">Hit Rate</span></div>
     <div class="ss-item"><span class="ss-val pos">782.41</span><span class="ss-label">Units Profit</span></div>
+  </div>
+
+  <!-- Live results marquee (PLACEHOLDER figures — replace with In Play Tips' real monthly results) -->
+  <div class="marquee-box">
+    <div class="marquee-title">Live results</div>
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>Jan '25 <strong>+18.2U</strong></span><span>Feb '25 <strong>+24.6U</strong></span><span>Mar '25 <strong>+11.9U</strong></span><span>Apr '25 <strong>+31.4U</strong></span><span>May '25 <strong>+9.7U</strong></span><span>Jun '25 <strong>+27.3U</strong></span><span>Jul '25 <strong>+15.1U</strong></span><span>Aug '25 <strong>+22.8U</strong></span>
+        <span>Jan '25 <strong>+18.2U</strong></span><span>Feb '25 <strong>+24.6U</strong></span><span>Mar '25 <strong>+11.9U</strong></span><span>Apr '25 <strong>+31.4U</strong></span><span>May '25 <strong>+9.7U</strong></span><span>Jun '25 <strong>+27.3U</strong></span><span>Jul '25 <strong>+15.1U</strong></span><span>Aug '25 <strong>+22.8U</strong></span>
+      </div>
+    </div>
   </div>
 
   <!-- 3. WHAT WE DO -->
