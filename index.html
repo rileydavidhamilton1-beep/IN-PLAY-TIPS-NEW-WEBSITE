@@ -23,7 +23,14 @@
 html{-webkit-text-size-adjust:100%}
 body{
   font-family:var(--body); color:var(--white); background-color:var(--base);
-  background-image:none;
+  background-image:
+    radial-gradient(125% 62% at 50% -6%, rgba(254,110,0,.30), rgba(254,110,0,0) 62%),
+    linear-gradient(90deg, rgba(251,146,60,.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(251,146,60,.06) 1px, transparent 1px);
+  background-size: 100% 680px, 64px 64px, 64px 64px;
+  background-position: top center, 0 0, 0 0;
+  background-repeat: no-repeat, repeat, repeat;
+  background-attachment: scroll;
   line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden;
 }
 img{max-width:100%;display:block}
