@@ -357,3 +357,12 @@ section{padding:34px 0}
 .stats,.statstrip,.graph-card,.reason,.dm-card,.calc-box,.faq details,.pkg-card,.feature{
   box-shadow:inset 0 1px 0 rgba(255,255,255,.05), 0 14px 38px rgba(0,0,0,.4);
 }
+/* ---------- About: editorial manifesto / atmospheric intro ---------- */
+.about-intro{margin:14px;border-radius:24px;overflow:hidden;padding:30px 20px 26px;position:relative;border:1px solid var(--border);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 14px 38px rgba(0,0,0,.45)}
+.about-intro .eyebrow{display:block;margin-bottom:12px}
+.about-intro h1{font-family:var(--head);text-transform:uppercase;font-size:42px;line-height:.92;margin-bottom:14px}
+.about-intro .lead{color:var(--muted);font-size:14px;line-height:1.55;max-width:320px}
+.manifesto{padding:34px 22px}
+.manifesto p{font-family:var(--head);text-transform:uppercase;font-size:25px;line-height:1.08;letter-spacing:.01em}
+.manifesto p .dim{color:#56524b}
+.about-divider{height:2px;width:46px;background:linear-gradient(90deg,var(--gold),transparent);margin:0 22px;box-shadow:0 0 12px rgba(var(--gold-rgb),.5)}
