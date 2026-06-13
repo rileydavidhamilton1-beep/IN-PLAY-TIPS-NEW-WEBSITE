@@ -48,7 +48,7 @@ h1,h2,h3,.head{font-family:var(--head);font-weight:400;text-transform:uppercase;
 .btn-primary{background:var(--gold);color:var(--btn-text);border-color:var(--gold);outline-color:#252129;
   box-shadow:0 0 60px 0 rgba(var(--gold-rgb),.2)}
 .btn-primary:hover{filter:brightness(1.05)}
-.btn-ghost{background:#1f1726;color:var(--gold);border-color:var(--gold);outline-color:#1f1726;
+.btn-ghost{background-color:#C2C6CB;background:linear-gradient(145deg,#EDEFF2 0%,#C8CCD2 30%,#AAB0B7 55%,#C8CCD2 80%,#9AA0A6 100%);color:var(--gold);border-color:var(--gold);outline-color:#1f1726;
   box-shadow:0 0 60px 0 rgba(var(--gold-rgb),.2)}
 .btn-ghost:hover{filter:brightness(1.1)}
 
