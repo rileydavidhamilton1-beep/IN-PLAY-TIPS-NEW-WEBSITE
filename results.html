@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Results — In Play Tips</title>
+<link rel="stylesheet" href="styles.css?v=64">
+</head>
+<body>
+
+<!-- Layered site background -->
+<div class="site-bg" aria-hidden="true">
+  <div class="l1"></div>
+  <div class="l2"></div>
+  <div class="glow"></div>
+  <div class="gblob g2"></div>
+  <div class="gblob g3"></div>
+  <div class="gblob g4"></div>
+  <div class="gblob g5"></div>
+  <div class="grid"></div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a class="header-logo" href="index.html" aria-label="In Play Tips home"><img src="logo.png" alt="logo"></a>
+    <button class="btn btn-primary" type="button">Sign up</button>
+    <a class="hamburger" href="index.html" aria-label="Home"><span></span><span></span><span></span></a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <!-- Intro -->
+  <section class="about">
+    <div class="section-head"><h2>Results</h2>
+      <p class="lead">A transparent look at our verified performance. Figures are based on
+        $100 units across all sports and racing. Placeholder data &mdash; swap for your real figures.</p>
+    </div>
+  </section>
+
+  <!-- Key stat strip -->
+  <div class="statstrip">
+    <div class="ss-item"><span class="ss-val">1,708</span><span class="ss-label">Tips</span></div>
+    <div class="ss-item"><span class="ss-val">78.42%</span><span class="ss-label">Hit Rate</span></div>
+    <div class="ss-item"><span class="ss-val pos">782.41</span><span class="ss-label">Units Profit</span></div>
+  </div>
+
+  <!-- $100 bettor return -->
+  <div class="stats" style="margin-top:14px">
+    <div class="stat-row"><span class="stat-label"><span class="stat-ico"></span>$100 bettor return</span><span class="stat-val pos">$78,241.00</span></div>
+  </div>
+
+  <!-- Performance chart -->
+  <section id="performance">
+    <div class="section-head"><h2>Performance</h2>
+      <p class="lead">Cumulative units over the season.</p>
+    </div>
+    <div class="tabs" id="perf-tabs">
+      <button class="tab active" type="button" data-key="all">All sports</button>
+    </div>
+    <div class="graph-card">
+      <div class="equity-head">
+        <div class="eq-row"><span class="eq-k">Tips</span><span class="eq-v" id="eq-tips">1,708</span></div>
+        <div class="eq-row"><span class="eq-k">Units profit</span><span class="eq-v pos" id="eq-units">+782.41</span></div>
+      </div>
+      <div class="equity-label" id="eq-label">All sports</div>
+      <svg class="equity" viewBox="0 0 360 232" role="img" aria-label="Cumulative units chart">
+        <defs><linearGradient id="equityFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#39FF14" stop-opacity="0.30"/>
+          <stop offset="100%" stop-color="#39FF14" stop-opacity="0"/>
+        </linearGradient></defs>
+        <rect class="plotbg" x="0" y="0" width="0" height="0"></rect>
+        <g class="grid"></g>
+        <g class="ylabels axis"></g>
+        <g class="xlabels axis"></g>
+        <path class="area" d=""></path>
+        <path class="line" d=""></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- By sport -->
+  <section>
+    <div class="section-head"><h2>By sport</h2>
+      <p class="lead">Units profit per sport. Placeholder figures &mdash; set your real numbers.</p>
+    </div>
+    <div class="stats">
+      <div class="stat-row"><span class="stat-label"><span class="stat-ico"></span>All sports</span><span class="stat-val pos">+782.41u</span></div>
+      <div class="stat-row"><span class="stat-label"><span class="stat-ico"></span>NRL</span><span class="stat-val pos">+312.00u</span></div>
+      <div class="stat-row"><span class="stat-label"><span class="stat-ico"></span>AFL</span><span class="stat-val pos">+268.00u</span></div>
+      <div class="stat-row"><span class="stat-label"><span class="stat-ico"></span>NBA</span><span class="stat-val pos">+205.00u</span></div>
+      <div class="stat-row"><span class="stat-label"><span class="stat-ico"></span>NFL</span><span class="stat-val pos">+150.00u</span></div>
+    </div>
+  </section>
+
+  <!-- How verified -->
+  <section>
+    <div class="section-head"><h2>How the numbers are verified</h2></div>
+    <ul class="verify-list">
+      <li>Every tip logged before kickoff</li>
+      <li>Settled against closing lines</li>
+      <li>Full history visible to members</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-final smoke" style="margin-top:20px">
+    <h3 style="font-family:var(--head);font-size:30px;text-transform:uppercase;margin-bottom:14px">Sign up and start winning</h3>
+    <button class="btn btn-primary" type="button" style="max-width:280px;margin:0 auto">Sign up</button>
+  </div>
+
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand"><img src="logo.png" alt="logo"><span class="bn">In Play Tips</span></div>
+    <div class="footer-handle"><span class="ig"></span>@in.play.tips</div>
+    <hr>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a><a href="packages.html">Packages</a><a href="results.html">Results</a><a href="index.html">About</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- Sign-up plan modal -->
+<div class="modal" id="signupModal" aria-hidden="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Choose your plan">
+    <button class="modal__x" type="button" data-close aria-label="Close">&times;</button>
+    <div class="modal__eyebrow">In Play Tips</div>
+    <h3 class="modal__title">Choose your plan</h3>
+    <!-- PLACEHOLDER prices &mdash; set your real pricing -->
+    <div class="plans">
+      <button class="plan" type="button" data-plan="weekly">
+        <span class="plan__l"><span class="plan__name">Weekly</span><span class="plan__feat">All daily tips + bet tracker</span></span>
+        <span class="plan__r"><span class="plan__price">$39</span><span class="plan__per">/week</span></span>
+      </button>
+      <button class="plan featured" type="button" data-plan="monthly">
+        <span class="plan__badge">Most popular</span>
+        <span class="plan__l"><span class="plan__name">Monthly</span><span class="plan__feat">Save vs weekly + priority support</span></span>
+        <span class="plan__r"><span class="plan__price">$119</span><span class="plan__per">/month</span></span>
+      </button>
+      <button class="plan" type="button" data-plan="quarterly">
+        <span class="plan__l"><span class="plan__name">Quarterly</span><span class="plan__feat">Best value &middot; locked-in rate</span></span>
+        <span class="plan__r"><span class="plan__price">$299</span><span class="plan__per">/quarter</span></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Sign-up modal */
+(function(){
+  var modal=document.getElementById('signupModal'); if(!modal) return;
+  function open(e){ if(e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function close(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  Array.prototype.forEach.call(document.querySelectorAll('.btn-primary'),function(b){ b.addEventListener('click',open); });
+  modal.addEventListener('click',function(e){ if(e.target.hasAttribute('data-close')) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && modal.classList.contains('open')) close(); });
+})();
+</script>
+<script>
+/* Performance equity curve (placeholder data) */
+(function(){
+  var DATA={ all:{tips:'1,708', d:[0,55,105,160,215,272,330,392,452,512,570,625,672,712,748,770,782.41]} };
+  var MONTHS=["Jan '25","Feb '25","Mar '25","Apr '25","May '25","Jun '25","Jul '25","Aug '25","Sep '25","Oct '25","Nov '25","Dec '25","Jan '26","Feb '26","Mar '26","Apr '26","May '26"];
+  var W=360,H=232,PADL=30,PADR=10,PADT=12,PADB=34;
+  var svg=document.querySelector('.equity'); if(!svg) return;
+  var line=svg.querySelector('.line'), area=svg.querySelector('.area'), grid=svg.querySelector('.grid'),
+      yl=svg.querySelector('.ylabels'), xl=svg.querySelector('.xlabels'), pbg=svg.querySelector('.plotbg');
+  var tipsEl=document.getElementById('eq-tips'), unitsEl=document.getElementById('eq-units'), labelEl=document.getElementById('eq-label');
+  var pL=PADL,pR=W-PADR,pT=PADT,pB=H-PADB;
+  pbg.setAttribute('x',pL);pbg.setAttribute('y',pT);pbg.setAttribute('width',pR-pL);pbg.setAttribute('height',pB-pT);
+  function scale(m){ if(m<=200) return {top:200,step:100}; return {top:Math.ceil(m/200)*200,step:200}; }
+  function fmt(v){ return v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+  function draw(key,label){
+    var o=DATA[key]||DATA.all, a=o.d, n=a.length, mx=Math.max.apply(null,a)||1, s=scale(mx);
+    var X=function(i){return pL+(pR-pL)*(i/(n-1));}, Y=function(v){return pT+(pB-pT)*(1-v/s.top);};
+    var d=''; for(var i=0;i<n;i++){ d+=(i?'L':'M')+X(i).toFixed(1)+' '+Y(a[i]).toFixed(1); }
+    line.setAttribute('d',d);
+    area.setAttribute('d', d+' L'+X(n-1).toFixed(1)+' '+pB.toFixed(1)+' L'+X(0).toFixed(1)+' '+pB.toFixed(1)+' Z');
+    var g='', yy='';
+    for(var v=0; v<=s.top+0.1; v+=s.step){ var gy=Y(v);
+      g+='<line x1="'+pL+'" y1="'+gy.toFixed(1)+'" x2="'+pR+'" y2="'+gy.toFixed(1)+'"></line>';
+      yy+='<text class="ylabel" x="'+(pL-6)+'" y="'+(gy+3).toFixed(1)+'" text-anchor="end">'+v+'</text>';
+    }
+    grid.innerHTML=g; yl.innerHTML=yy;
+    var xx='';
+    for(var j=0;j<n;j+=2){ var px=X(j).toFixed(1), py=pB+12;
+      xx+='<text class="xlabel" x="'+px+'" y="'+py+'" text-anchor="end" transform="rotate(-42 '+px+' '+py+')">'+MONTHS[j]+'</text>';
+    }
+    xl.innerHTML=xx;
+    if(tipsEl) tipsEl.textContent=o.tips;
+    if(unitsEl) unitsEl.textContent='+'+fmt(a[n-1]);
+    if(labelEl) labelEl.textContent=label||'All sports';
+  }
+  draw('all','All sports');
+})();
+</script>
+</body>
+</html>
