@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In Play Tips — Homepage Mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#0c0a09; --deep:#0a080d; --panel:#15140f; --panel2:#1c1b15;
+  --border:#234a16; --line:#2a2a22;
+  --lime:#39FF14; --lime2:#7CFC00; --lime-soft:#aaff66;
+  --muted:#9a948c; --white:#fff; --teal:#2EE6B6;
+  --silver:linear-gradient(145deg,#D4D8DD 0%,#A8ADB4 30%,#868C94 55%,#A8ADB4 80%,#767C84 100%);
+  --head:"Anton",sans-serif; --body:"Oswald",system-ui,sans-serif;
+  --glow:0 0 14px rgba(57,255,20,.35),0 0 30px rgba(57,255,20,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#070707;color:#fff;font-family:var(--body);padding:30px 0 70px;-webkit-font-smoothing:antialiased}
+.page-head{text-align:center;margin:0 auto 26px;max-width:900px;padding:0 20px}
+.page-head h1{font-family:var(--head);font-size:30px;letter-spacing:.04em;text-transform:uppercase}
+.page-head p{color:#8a8a8a;font-size:14px;margin-top:8px}
+.board{display:flex;flex-wrap:wrap;gap:40px 30px;justify-content:center;align-items:flex-start;padding:10px 24px 40px;}
+.col{flex:0 0 auto;width:414px}
+.lab{margin-bottom:14px;text-align:center}
+.lab b{font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;font-size:17px;color:var(--lime)}
+.lab span{display:block;color:#8a8a8a;font-size:12px;margin-top:3px;line-height:1.4}
+/* iphone frame */
+.phone{width:414px;border-radius:54px;background:linear-gradient(#202024,#111114);padding:12px;
+  box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 0 1px #333 inset;position:relative}
+.island{position:absolute;top:24px;left:50%;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:18px;z-index:60}
+.screen{width:390px;height:812px;overflow-y:auto;overflow-x:hidden;border-radius:44px;background:var(--base);color:#fff;position:relative;scrollbar-width:none}
+.screen::-webkit-scrollbar{width:0;height:0}
+.statusbar{display:flex;justify-content:space-between;align-items:center;padding:15px 26px 6px;font-weight:600;font-size:14px;position:sticky;top:0;z-index:50}
+.sb-i{display:flex;gap:6px;align-items:center}
+.sb-i svg{display:block}
+/* shared atoms (scoped) */
+.screen h1,.screen h2,.screen h3{font-family:var(--head);font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+.eyebrow{font-family:var(--body);font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--lime);text-shadow:0 0 10px rgba(57,255,20,.4)}
+.muted{color:var(--muted)}
+.cta{display:inline-flex;align-items:center;justify-content:center;font-family:var(--body);font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;font-size:14px;background:var(--lime);color:#08140a;border:0;border-radius:12px;padding:14px 22px;cursor:pointer;box-shadow:var(--glow)}
+.cta-ghost{background:var(--silver);color:#16160f;border:2px solid var(--lime);border-radius:12px;padding:13px 22px;font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:.06em;display:inline-flex;align-items:center;justify-content:center}
+.smoke{background:linear-gradient(rgba(8,7,5,.55),rgba(8,7,5,.78)),url("smoke-bg.png") center/cover}
+.logo-sm{width:30px;height:30px;border-radius:7px}
+/* ticker */
+.tick{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.tick::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;display:inline-flex;gap:7px;align-items:center;white-space:nowrap;border:1px solid var(--border);border-radius:999px;padding:7px 12px;font-size:12px;background:rgba(0,0,0,.3)}
+.chip b{color:var(--lime);font-family:var(--body);font-weight:700;letter-spacing:.05em}
+.chip .o{color:var(--teal);font-weight:600}
+
+/* ============ PHONE 1 — EDITORIAL SCROLL-STORY ============ */
+.p1 .hero{position:relative;min-height:560px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 22px 26px;overflow:hidden}
+.p1 .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.55}
+.p1 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,7,5,.5) 0%,rgba(8,7,5,0) 30%,rgba(12,10,9,.9) 78%,#0c0a09 100%)}
+.p1 .hero>*{position:relative;z-index:2}
+.p1 .hero h1{font-size:54px;line-height:.86;margin:10px 0 16px}
+.p1 .hero h1 .l{color:var(--lime);text-shadow:0 0 18px rgba(57,255,20,.5)}
+.p1 .scrolltag{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.p1 .manifesto{padding:46px 24px 40px}
+.p1 .manifesto p{font-family:var(--head);text-transform:uppercase;font-size:26px;line-height:1.06;letter-spacing:.01em}
+.p1 .manifesto p .dim{color:#4d4a44}
+.p1 .bignum{padding:30px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.p1 .bignum .row{display:flex;align-items:baseline;justify-content:space-between;padding:14px 0}
+.p1 .bignum .row+.row{border-top:1px solid var(--line)}
+.p1 .bignum .n{font-family:var(--head);font-size:46px;color:#fff;line-height:.9}
+.p1 .bignum .n.l{color:var(--lime)}
+.p1 .bignum .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);max-width:120px;text-align:right}
+.p1 .reasons{padding:40px 24px}
+.p1 .reason{padding:22px 0;border-top:1px solid var(--line);display:flex;gap:16px}
+.p1 .reason .no{font-family:var(--head);font-size:30px;color:var(--lime);line-height:1}
+.p1 .reason h3{font-size:20px;margin-bottom:6px}
+.p1 .reason p{font-size:13px;color:var(--muted);line-height:1.5}
+.p1 .close{position:relative;padding:50px 24px 60px;text-align:center;overflow:hidden}
+.p1 .close h2{font-size:40px;line-height:.9;margin-bottom:18px}
+
+/* ============ PHONE 2 — APP-STORE / PRODUCT LAUNCH ============ */
+.p2 .top{display:flex;gap:14px;align-items:center;padding:14px 20px 16px}
+.p2 .icon{width:62px;height:62px;border-radius:15px;background:#000;border:1px solid #2a2a22;display:flex;align-items:center;justify-content:center;box-shadow:var(--glow)}
+.p2 .icon img{width:46px;height:46px}
+.p2 .top h2{font-size:24px}
+.p2 .top .sub{color:var(--muted);font-size:12px;margin-top:2px}
+.p2 .stars{display:flex;align-items:center;gap:6px;margin-top:6px;color:var(--lime);font-weight:700;font-size:12px}
+.p2 .getbar{display:flex;gap:10px;padding:0 20px 14px;align-items:center}
+.p2 .getbar .cta{flex:1}
+.p2 .scrollshots{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding:6px 20px 18px}
+.p2 .scrollshots::-webkit-scrollbar{display:none}
+.p2 .shot{flex:0 0 150px;height:300px;border-radius:18px;border:1px solid #2a2a22;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;background-position:center}
+.p2 .shot .q{font-size:13px;font-weight:600}
+.p2 .shot .w{color:var(--teal);font-weight:700;font-size:13px}
+.p2 .sec{padding:8px 20px 22px;border-top:1px solid var(--line)}
+.p2 .sec h3{font-size:16px;letter-spacing:.04em;margin:16px 0 12px}
+.p2 .frow{display:flex;gap:12px;align-items:flex-start;padding:11px 0}
+.p2 .frow+.frow{border-top:1px solid var(--line)}
+.p2 .frow .fi{width:34px;height:34px;border-radius:9px;flex:0 0 auto;background:rgba(57,255,20,.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--lime)}
+.p2 .frow b{font-size:14px;display:block;letter-spacing:.02em}
+.p2 .frow span{color:var(--muted);font-size:12px}
+.p2 .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px}
+.p2 .nums div{text-align:center}
+.p2 .nums .n{font-family:var(--head);font-size:26px;color:var(--lime)}
+.p2 .nums .k{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.p2 .sticky{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(12,10,9,0),rgba(12,10,9,.96) 35%);padding:14px 20px calc(16px + env(safe-area-inset-bottom));display:flex;gap:12px;align-items:center;z-index:40}
+.p2 .sticky .price{font-size:12px;color:var(--muted)}.p2 .sticky .price b{color:#fff;font-size:15px;font-family:var(--head)}
+.p2 .sticky .cta{flex:1}
+
+/* ============ PHONE 3 & 4 — EDITORIAL, FEWER BOXES ============ */
+.ed .nav{display:flex;align-items:center;justify-content:space-between;padding:6px 20px 14px}
+.ed .nav .brand{display:flex;align-items:center;gap:9px;font-family:var(--head);text-transform:uppercase;font-size:16px}
+.ed .hero{padding:18px 22px 26px}
+.ed .hero h1{font-size:46px;line-height:.9;margin:12px 0 16px}
+.ed .hero .lead{color:var(--muted);font-size:14px;line-height:1.5;max-width:300px}
+.ed .hero .btns{display:flex;gap:10px;margin-top:20px}
+.ed .div{height:1px;background:var(--line);margin:0 22px}
+.ed .div.lime{background:linear-gradient(90deg,var(--lime),transparent);height:2px;width:46px;margin:0 22px}
+.ed .sec{padding:30px 22px}
+.ed .sec .eyebrow{display:block;margin-bottom:10px}
+.ed .sec h2{font-size:30px;margin-bottom:12px}
+.ed .sec p{color:var(--muted);font-size:13px;line-height:1.6}
+.ed .statline{display:flex;justify-content:space-between;padding:18px 22px}
+.ed .statline div{text-align:center}
+.ed .statline .n{font-family:var(--head);font-size:30px}.ed .statline .n.l{color:var(--lime)}
+.ed .statline .k{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.ed .reason{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+.ed .reason .no{font-family:var(--head);color:var(--lime);font-size:22px}
+.ed .reason h4{font-size:15px;text-transform:uppercase;font-family:var(--head);letter-spacing:.02em;margin-bottom:4px}
+.ed .reason p{font-size:12.5px}
+.ed .panel{margin:22px;padding:22px;border:1.5px solid var(--lime);border-radius:18px;box-shadow:var(--glow);text-align:center;background:rgba(57,255,20,.04)}
+.ed .panel h3{font-size:26px;margin-bottom:8px}
+.ed .panel .pr{display:flex;justify-content:center;gap:18px;margin:14px 0 18px}
+.ed .panel .pr div{font-size:12px;color:var(--muted)}
+.ed .panel .pr b{display:block;font-family:var(--head);font-size:24px;color:#fff}
+.ed .faq{border-top:1px solid var(--line);padding:14px 0;display:flex;justify-content:space-between;align-items:center}
+.ed .faq b{font-size:13px;font-weight:500}.ed .faq span{color:var(--lime);font-size:18px}
+.ed.alt .hero h1{font-size:40px}
+.ed.alt .sec h2{border-left:3px solid var(--lime);padding-left:12px}
+.ed.alt .eyebrow{color:var(--muted)}
+
+/* ============ PHONE 5 — CURRENT, LEVELLED UP ============ */
+.p5 .nav{display:flex;align-items:center;justify-content:space-between;padding:6px 16px 10px}
+.p5 .nav .brand{display:flex;align-items:center;gap:8px;font-family:var(--head);text-transform:uppercase;font-size:15px}
+.p5 .ham{width:38px;height:38px;border:1.5px solid var(--lime);border-radius:10px;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;box-shadow:0 0 8px rgba(57,255,20,.3)}
+.p5 .ham span{width:16px;height:2px;background:var(--lime)}
+.p5 .trust{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 14px;padding:10px 16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--deep)}
+.p5 .trust span{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:inline-flex;gap:6px;align-items:center}
+.p5 .trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--lime);box-shadow:0 0 6px var(--lime)}
+.p5 .hero{margin:14px;border:1.5px solid var(--lime);border-radius:26px;overflow:hidden;padding:22px 18px 0;position:relative;box-shadow:0 0 18px rgba(57,255,20,.18)}
+.p5 .hero h1{font-size:38px;margin:12px 0 18px}
+.p5 .hero .btns{display:flex;flex-direction:column;gap:12px}
+.p5 .hero img.ath{display:block;width:100%;margin-top:8px}
+.p5 .strip{display:flex;margin:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.p5 .strip div{flex:1;text-align:center;padding:14px 6px}
+.p5 .strip div+div{border-left:1px solid var(--line)}
+.p5 .strip .n{font-family:var(--head);font-size:26px}.p5 .strip .n.l{color:var(--lime)}
+.p5 .strip .k{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.p5 .sec{padding:24px 18px}
+.p5 .sec h2{font-size:30px;margin-bottom:8px}
+.p5 .sec .lead{color:var(--muted);font-size:13px;line-height:1.5}
+.p5 .wins{margin:0 0 6px}
+.p5 .wins .chip .o{color:var(--teal)}
+.p5 .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.p5 .feat div{border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center}
+.p5 .feat .fi{color:var(--lime);font-size:18px;margin-bottom:6px}
+.p5 .feat b{font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--lime-soft);line-height:1.2;display:block}
+.p5 .cta-final{margin:14px;padding:22px 18px;border:1.5px solid var(--lime);border-radius:20px;box-shadow:var(--glow);text-align:center;position:relative;overflow:hidden}
+.p5 .cta-final h3{font-size:26px;margin-bottom:14px}
+.p5 .foot{padding:24px 18px 30px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;text-align:center}
+.p5 .foot .links{display:flex;justify-content:center;gap:16px;margin:12px 0;flex-wrap:wrap}
+.p5 .foot .links a{color:#fff;font-family:var(--head);text-transform:uppercase;font-size:13px;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="page-head">
+  <h1>In Play Tips — Homepage Mockups</h1>
+  <p>5 directions, all using your real content + brand (lime / smoke / Anton). Each phone scrolls independently. Wraps + scrolls on narrow screens.</p>
+</div>
+<div class="board" id="board"></div>
+
+<script>
+/* status bar markup reused per phone */
+var STATUS = '<div class="statusbar"><span>9:41</span><span class="sb-i">'
++'<svg width="18" height="12" viewBox="0 0 18 12"><g fill="#fff"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></g></svg>'
++'<svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#fff" stroke-width="1.6"><path d="M2 4.5a9 9 0 0 1 13 0"/><path d="M4.5 7a5.5 5.5 0 0 1 8 0"/><circle cx="8.5" cy="9.6" r="1.1" fill="#fff" stroke="none"/></svg>'
++'<svg width="26" height="13" viewBox="0 0 26 13"><rect x="1" y="1.5" width="21" height="10" rx="3" fill="none" stroke="#fff" stroke-opacity=".6"/><rect x="3" y="3.5" width="14" height="6" rx="1.5" fill="#fff"/></svg>'
++'</span></div>';
+
+function ticker(){return '<div class="tick">'
++'<span class="chip"><b>NRL</b> Panthers -4.5 <span class="o">+2.40u</span></span>'
++'<span class="chip"><b>AFL</b> Collingwood line <span class="o">+1.80u</span></span>'
++'<span class="chip"><b>NBA</b> Bucks ML <span class="o">+1.05u</span></span>'
++'<span class="chip"><b>NFL</b> Chiefs -3 <span class="o">+0.90u</span></span>'
++'<span class="chip"><b>Racing</b> R6 #4 EW <span class="o">+3.20u</span></span></div>';}
+
+/* ---- PHONE 1: EDITORIAL SCROLL-STORY ---- */
+var P1 = STATUS + '<div class="p1">'
++'<section class="hero"><img class="bg" src="hero-image.png" alt="">'
++'<span class="eyebrow">In Play Tips</span>'
++'<h1>Australia\'s <span class="l">sharpest</span> betting insight</h1>'
++'<button class="cta" style="align-self:flex-start">Start winning &rarr;</button>'
++'<div class="scrolltag">Scroll &darr;</div></section>'
++'<section class="manifesto"><p>We don\'t believe in guesswork. <span class="dim">We believe in informed decisions &mdash; every tip curated, built on experience, proven algorithms and a relentless drive to beat the market.</span></p></section>'
++'<section class="bignum">'
++'<div class="row"><span class="n l">782.41</span><span class="k">units profit</span></div>'
++'<div class="row"><span class="n">78.42%</span><span class="k">hit rate</span></div>'
++'<div class="row"><span class="n">1,708</span><span class="k">tips logged</span></div>'
++'<div class="row"><span class="n l">$78,241</span><span class="k">$100 bettor return</span></div></section>'
++'<section style="padding:26px 24px 6px"><span class="eyebrow">Live board</span></section>'
++'<div style="padding:0 24px 10px">'+ticker()+'</div>'
++'<section class="reasons"><span class="eyebrow">"Too good to be true?"</span><h2 style="font-size:32px;margin:8px 0 6px">Good. Here\'s why it works</h2>'
++'<div class="reason"><span class="no">01</span><div><h3>Edge is measured, not promised</h3><p>Models are refined continuously against closing lines, so the advantage is something we track and prove.</p></div></div>'
++'<div class="reason"><span class="no">02</span><div><h3>Staking does the heavy lifting</h3><p>Disciplined unit sizing means a 78% hit rate compounds instead of swinging. Boring on purpose.</p></div></div>'
++'<div class="reason"><span class="no">03</span><div><h3>Nothing is hidden</h3><p>Every tip posted before the event, settled honestly after &mdash; the full ledger is open to members.</p></div></div></section>'
++'<section class="close smoke"><span class="eyebrow">Members results &middot; @in.play.tips</span><h2 style="margin-top:10px">Sign up and start winning</h2><button class="cta">Choose your plan</button></section>'
++'</div>';
+
+/* ---- PHONE 2: APP-STORE / PRODUCT LAUNCH ---- */
+var P2 = STATUS + '<div class="p2">'
++'<div class="top"><div class="icon"><img src="logo.png" alt=""></div><div><h2>In Play Tips</h2><div class="sub">Australia\'s sharpest betting insight</div>'
++'<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="muted" style="color:#9a948c">78.42% hit rate &middot; AU-based</span></div></div></div>'
++'<div class="getbar"><button class="cta">Get access</button><button class="cta-ghost" style="flex:0 0 auto">Results</button></div>'
++'<div class="scrollshots">'
++'<div class="shot smoke"><div class="w">+$820 today</div><div class="q">"Ur crazy. Profit just from AFL"</div></div>'
++'<div class="shot smoke"><div class="w">+58.71U</div><div class="q">"Berry lowkey had me stressing but f***ing hell"</div></div>'
++'<div class="shot smoke"><div class="w">Same game multi</div><div class="q">"Cashed the $300 SGM 🔥"</div></div>'
++'<div class="shot smoke"><div class="w">+1.8U</div><div class="q">"Collingwood line cashed easy"</div></div></div>'
++'<div class="sec"><h3>By the numbers</h3><div class="nums"><div><div class="n">1,708</div><div class="k">Tips</div></div><div><div class="n">78.42%</div><div class="k">Hit rate</div></div><div><div class="n">782u</div><div class="k">Profit</div></div></div></div>'
++'<div class="sec"><h3>What you get</h3>'
++'<div class="frow"><div class="fi">&#10003;</div><div><b>Verified results</b><span>Every tip logged before kickoff, settled against closing lines.</span></div></div>'
++'<div class="frow"><div class="fi">&#9650;</div><div><b>Professional tips</b><span>5+ daily across NRL, AFL, NBA, NFL and racing.</span></div></div>'
++'<div class="frow"><div class="fi">&#9636;</div><div><b>Personal bet tracker</b><span>Customised staking so it scales to any bankroll.</span></div></div></div>'
++'<div class="sec"><h3>Live board</h3>'+ticker()+'</div>'
++'<div class="sticky"><div class="price">From<br><b>$39/wk</b></div><button class="cta">Get access</button></div>'
++'</div>';
+
+/* ---- PHONE 3: EDITORIAL (fewer boxes) ---- */
+function edBody(alt){
+  return STATUS + '<div class="ed'+(alt?' alt':'')+'">'
+  +'<div class="nav"><span class="brand"><img class="logo-sm" src="logo.png" alt="">In Play Tips</span><button class="cta" style="padding:9px 16px;font-size:12px">Sign up</button></div>'
+  +'<section class="hero"><span class="eyebrow">'+(alt?'Sports betting tips':'Australia')+'</span><h1>Australia\'s sharpest betting insight</h1>'
+  +'<p class="lead">No guesswork &mdash; informed decisions built on experience, proven algorithms and a relentless drive to beat the market.</p>'
+  +'<div class="btns"><button class="cta">Choose your plan</button><button class="cta-ghost">Our results</button></div></section>'
+  +'<div style="padding:0 22px 10px">'+ticker()+'</div>'
+  +'<div class="div lime"></div>'
+  +'<div class="statline"><div><span class="n l">782.41</span><div class="k">Units</div></div><div><span class="n">78.42%</span><div class="k">Hit rate</div></div><div><span class="n">1,708</span><div class="k">Tips</div></div><div><span class="n l">$78k</span><div class="k">$100 return</div></div></div>'
+  +'<div class="div"></div>'
+  +'<section class="sec"><span class="eyebrow">What we do</span><h2>Beat the market</h2><p>Every tip is curated with care and built on a solid foundation of experience, proven algorithms, in-depth data and years of disciplined refinement.</p></section>'
+  +'<div class="div"></div>'
+  +'<section class="sec"><span class="eyebrow">"Too good to be true?"</span><h2 style="margin-bottom:6px">Here\'s why it works</h2>'
+  +'<div class="reason"><span class="no">01</span><div><h4>Edge is measured, not promised</h4><p>Refined against closing lines &mdash; tracked and proven, not hoped for.</p></div></div>'
+  +'<div class="reason"><span class="no">02</span><div><h4>Staking does the heavy lifting</h4><p>Disciplined units mean 78% compounds instead of swinging.</p></div></div>'
+  +'<div class="reason"><span class="no">03</span><div><h4>Nothing is hidden</h4><p>Posted before the event, settled honestly. The full ledger is open.</p></div></div></section>'
+  +'<div class="panel"><span class="eyebrow">Choose your plan</span><h3>Start winning today</h3>'
+  +'<div class="pr"><div>Weekly<b>$39</b></div><div>Monthly<b>$119</b></div><div>Quarterly<b>$299</b></div></div>'
+  +'<button class="cta">Sign up</button></div>'
+  +'<section class="sec" style="padding-top:6px"><span class="eyebrow">FAQ</span>'
+  +'<div class="faq"><b>How do I get the tips?</b><span>+</span></div>'
+  +'<div class="faq"><b>What bankroll do I need?</b><span>+</span></div>'
+  +'<div class="faq"><b>Can I cancel anytime?</b><span>+</span></div></section>'
+  +'<div class="div"></div><div style="padding:22px;text-align:center;color:#7a766f;font-size:12px">@in.play.tips &middot; 18+ Gamble responsibly</div>'
+  +'</div>';
+}
+
+/* ---- PHONE 5: CURRENT, LEVELLED UP ---- */
+var P5 = STATUS + '<div class="p5">'
++'<div class="nav"><span class="brand"><img class="logo-sm" src="logo.png" alt="">In Play Tips</span>'
++'<button class="cta" style="padding:8px 18px;font-size:12px">Sign up</button>'
++'<div class="ham"><span></span><span></span><span></span></div></div>'
++'<div class="trust"><span>Verified results</span><span>78%+ hit rate</span><span>Cancel anytime</span><span>AU-based</span></div>'
++'<div class="hero"><span class="eyebrow">In Play Tips</span><h1>Australia\'s sharpest betting insight</h1>'
++'<div class="btns"><button class="cta">Sign up</button><button class="cta-ghost">Our results</button></div>'
++'<img class="ath" src="hero-image.png" alt=""></div>'
++'<div style="padding:0 14px 6px"><div class="eyebrow" style="margin:6px 2px">Recent wins</div>'+ticker()+'</div>'
++'<div class="strip"><div><div class="n">1,708</div><div class="k">Tips</div></div><div><div class="n">78.42%</div><div class="k">Hit rate</div></div><div><div class="n l">782.41</div><div class="k">Units</div></div></div>'
++'<section class="sec"><h2>What we do</h2><p class="lead">At In Play Tips we don\'t believe in guesswork &mdash; we believe in informed decisions. Every tip is curated with care and built on proven algorithms, in-depth data and a relentless drive to beat the market.</p>'
++'<div class="feat"><div><div class="fi">&#9211;</div><b>Verified Results</b></div><div><div class="fi">&#9650;</div><b>Professional Tips</b></div><div><div class="fi">&#9636;</div><b>Personal Bet Tracker</b></div></div></section>'
++'<section class="sec" style="padding-top:0"><h2>How the numbers are verified</h2><p class="lead">A transparent look at our verified performance. Figures are based on $100 units across all sports and racing.</p>'
++'<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:14px"><span class="muted" style="text-transform:uppercase;letter-spacing:.06em;font-size:12px">$100 bettor return</span><b style="font-family:var(--head);color:var(--lime);font-size:22px">$78,241.00</b></div></section>'
++'<div class="cta-final smoke"><h3>Sign up and start winning</h3><button class="cta">Choose your plan</button></div>'
++'<div class="foot"><div style="font-family:var(--head);font-size:18px;text-transform:uppercase">In Play Tips</div><div class="links"><a>Home</a><a>Packages</a><a>Results</a><a>About</a></div>@in.play.tips<br><span style="font-size:11px">18+. Gamble responsibly.</span></div>'
++'</div>';
+
+var data=[
+  {b:'Phone 1 — Editorial scroll-story', s:'Full-bleed cinematic hero → manifesto → giant stat ledger → reasons → close. A narrative you scroll, not a stack of cards.', html:P1},
+  {b:'Phone 2 — App-store / product launch', s:'Reframed as a product: app icon, ★ rating, screenshot carousel, feature rows, sticky “Get access” bar.', html:P2},
+  {b:'Phone 3 — Editorial (PuntersHub-style)', s:'Your current content & order, boxes stripped out. Whitespace, hairline dividers, type hierarchy, one accent pricing panel.', html:edBody(false)},
+  {b:'Phone 4 — Editorial variant', s:'Same open direction, subtle shift: left-rule headings, muted eyebrows, tighter hero — a calmer second take.', html:edBody(true)},
+  {b:'Phone 5 — Current site, levelled up', s:'Same structure, elevated: trust strip, recent-wins ticker, glowing framed hero, sharper CTA, refined spacing/type.', html:P5}
+];
+document.getElementById('board').innerHTML = data.map(function(d){
+  return '<div class="col"><div class="lab"><b>'+d.b+'</b><span>'+d.s+'</span></div>'
+       +'<div class="phone"><div class="island"></div><div class="screen">'+d.html+'</div></div></div>';
+}).join('');
+</script>
+</body>
+</html>
