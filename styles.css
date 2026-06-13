@@ -350,3 +350,6 @@ section{padding:34px 0}
 .modal__note{color:var(--muted);font-size:11px;text-align:center;margin-top:18px;line-height:1.5}
 .plan__l{display:flex;flex-direction:column}
 .plan__r{display:flex;align-items:baseline;gap:2px;white-space:nowrap}
+
+/* hero image must not block button clicks */
+.hero-players{pointer-events:none}
