@@ -220,11 +220,8 @@
   </div>
 </footer>
 
-<!-- Sticky mobile sign-up bar -->
-<div class="sticky-cta"><button class="btn btn-primary" type="button">Sign up</button></div>
-
 <script>
-/* Scroll reveal for sections below the hero + sticky mobile CTA */
+/* Scroll reveal for sections below the hero */
 (function(){
   var hero=document.querySelector('.hero');
   if('IntersectionObserver' in window){
@@ -232,11 +229,6 @@
     Array.prototype.forEach.call(document.querySelectorAll('main section'),function(s){
       if(s===hero) return; s.classList.add('reveal'); io.observe(s);
     });
-  }
-  var sticky=document.querySelector('.sticky-cta');
-  if(sticky&&hero){
-    var onScroll=function(){ sticky.classList.toggle('show', hero.getBoundingClientRect().bottom<0); };
-    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
   }
 })();
 </script>
