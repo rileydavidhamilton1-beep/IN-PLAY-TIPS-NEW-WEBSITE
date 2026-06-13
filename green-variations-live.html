@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In Play Tips — Green Variations (live page)</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0a0a;color:#fff;font-family:system-ui,Arial,sans-serif;padding:30px 0 60px}
+  .head{text-align:center;margin-bottom:26px;padding:0 20px}
+  .head h1{font-size:24px;letter-spacing:.02em}
+  .head p{color:#9a9a9a;font-size:14px;margin-top:8px}
+  .board{display:flex;gap:34px;align-items:flex-start;overflow-x:auto;padding:10px 34px 30px;scroll-snap-type:x proximity}
+  .col{flex:0 0 auto;text-align:center;scroll-snap-align:center}
+  .name{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+  .hex{color:#8d8d8d;font-size:12px;margin-bottom:14px}
+  .phone{width:412px;border-radius:54px;background:linear-gradient(#202024,#111114);padding:11px;
+    box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 0 1px #333 inset;position:relative}
+  .island{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:118px;height:32px;background:#000;border-radius:18px;z-index:5}
+  .screen{width:390px;height:840px;border-radius:44px;overflow:hidden;background:#0c0a09}
+  iframe{width:390px;height:840px;border:0;display:block}
+</style>
+</head>
+<body>
+  <div class="head">
+    <h1>In Play Tips — Green Variations (live page)</h1>
+    <p>Your actual landing page, recoloured to each green. Scroll sideways to compare; scroll inside a phone to see the whole page.</p>
+  </div>
+  <div class="board" id="board"></div>
+  <script>
+    var P=[
+      {k:'emerald',   n:'Emerald',     hex:'base #10B981 • glow #34D399'},
+      {k:'lime',      n:'Neon Lime',   hex:'base #39FF14 • glow #7CFC00'},
+      {k:'forest',    n:'Deep Forest', hex:'base #1B7A3D • glow #2E9E4F'},
+      {k:'jade',      n:'Jade',        hex:'base #00C896 • glow #2EE6B6'},
+      {k:'chartreuse',n:'Chartreuse',  hex:'base #AEEA00 • glow #C6FF00'}
+    ];
+    document.getElementById('board').innerHTML = P.map(function(p){
+      return '<div class="col"><div class="name">'+p.n+'</div><div class="hex">'+p.hex+'</div>'+
+             '<div class="phone"><div class="island"></div><div class="screen">'+
+             '<iframe src="index.html?theme='+p.k+'" loading="lazy" title="'+p.n+'"></iframe>'+
+             '</div></div></div>';
+    }).join('');
+  </script>
+</body>
+</html>

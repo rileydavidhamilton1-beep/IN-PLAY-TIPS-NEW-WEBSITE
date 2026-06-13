@@ -7,7 +7,28 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>In Play Tips — Australia's Sharpest Betting Insight</title>
-<link rel="stylesheet" href="styles.css?v=54">
+<link rel="stylesheet" href="styles.css?v=55">
+<script>
+/* Optional accent theme via ?theme= (no param = original gold; live site unaffected) */
+(function(){
+  var key=new URLSearchParams(location.search).get('theme'); if(!key) return;
+  var T={
+    emerald:{b:'#10B981',g:'#34D399',t:'#1f1726'},
+    lime:{b:'#39FF14',g:'#7CFC00',t:'#1f1726'},
+    forest:{b:'#1B7A3D',g:'#2E9E4F',t:'#ffffff'},
+    jade:{b:'#00C896',g:'#2EE6B6',t:'#1f1726'},
+    chartreuse:{b:'#AEEA00',g:'#C6FF00',t:'#1f1726'}
+  };
+  var c=T[key]; if(!c) return;
+  function rgb(h){h=h.replace('#','');var n=parseInt(h,16);return [(n>>16)&255,(n>>8)&255,n&255];}
+  var s=document.documentElement.style, gb=rgb(c.b);
+  s.setProperty('--gold',c.b); s.setProperty('--gold2',c.g);
+  s.setProperty('--soft-gold',c.g); s.setProperty('--soft-gold2',c.g);
+  s.setProperty('--gold-rgb', rgb(c.g).join(','));
+  s.setProperty('--btn-text',c.t);
+  s.setProperty('--border', 'rgb('+gb.map(function(x){return Math.round(x*0.42);}).join(',')+')');
+})();
+</script>
 </head>
 <body>
 
