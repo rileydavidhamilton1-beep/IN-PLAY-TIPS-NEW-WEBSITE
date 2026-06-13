@@ -332,7 +332,7 @@ section{padding:34px 0}
   border:1.5px solid var(--gold);color:var(--gold);font-size:20px;line-height:1;display:flex;align-items:center;justify-content:center;
   cursor:pointer;box-shadow:0 0 12px rgba(var(--gold-rgb),.4)}
 .modal__eyebrow{font-family:var(--body);font-weight:500;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--gold);text-shadow:0 0 10px rgba(var(--gold-rgb),.5)}
-.modal__title{font-family:var(--head);font-size:30px;line-height:1;text-transform:uppercase;margin:8px 0 6px;color:var(--white)}
+.modal__title{font-family:var(--head);font-size:30px;line-height:1;text-transform:uppercase;margin:8px 0 16px;color:var(--white)}
 .modal__sub{color:var(--muted);font-size:13px;line-height:1.5;margin-bottom:18px}
 .plans{display:flex;flex-direction:column;gap:13px}
 .plan{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;
