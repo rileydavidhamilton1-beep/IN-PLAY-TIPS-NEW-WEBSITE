@@ -248,7 +248,7 @@ section{padding:34px 0}
 .cta{position:relative;background:radial-gradient(120% 100% at 80% 0%,#2a2230,#161019);
   border:1px solid var(--border);border-radius:22px;padding:22px;overflow:hidden;margin-top:4px}
 .cta h3{font-size:26px;max-width:62%}
-.cta .btn{margin-top:18px;max-width:280px}
+.cta .btn{margin-top:18px;width:auto;white-space:nowrap}
 .cta-graphic{position:absolute;right:-46px;bottom:0;width:178px;height:auto;filter:none;pointer-events:none}
 .legal{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .legal a{background:var(--panel);border:1px solid var(--border);border-radius:999px;
