@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>In Play Tips — Australia's Sharpest Betting Insight</title>
-<link rel="stylesheet" href="styles.css?v=36">
+<link rel="stylesheet" href="styles.css?v=41">
 </head>
 <body>
 
@@ -102,12 +102,20 @@
       <button class="tab" type="button" data-key="nfl">NFL</button>
     </div>
     <div class="graph-card">
-      <svg class="equity" viewBox="0 0 340 190" preserveAspectRatio="none" role="img" aria-label="Cumulative units chart">
+      <div class="equity-head">
+        <div class="eq-row"><span class="eq-k">Tips</span><span class="eq-v" id="eq-tips">1,708</span></div>
+        <div class="eq-row"><span class="eq-k">Units profit</span><span class="eq-v pos" id="eq-units">+782.41</span></div>
+      </div>
+      <div class="equity-label" id="eq-label">All sports</div>
+      <svg class="equity" viewBox="0 0 360 232" role="img" aria-label="Cumulative units chart">
         <defs><linearGradient id="equityFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#ffcd07" stop-opacity="0.28"/>
+          <stop offset="0%" stop-color="#ffcd07" stop-opacity="0.30"/>
           <stop offset="100%" stop-color="#ffcd07" stop-opacity="0"/>
         </linearGradient></defs>
+        <rect class="plotbg" x="0" y="0" width="0" height="0"></rect>
         <g class="grid"></g>
+        <g class="ylabels axis"></g>
+        <g class="xlabels axis"></g>
         <path class="area" d=""></path>
         <path class="line" d=""></path>
       </svg>
@@ -237,29 +245,48 @@
 /* Performance equity curve (placeholder cumulative-unit data — replace with real figures) */
 (function(){
   var DATA={
-    all:[0,64,120,165,240,295,360,430,505,590,690,782],
-    nrl:[0,22,40,75,95,130,150,185,210,250,280,312],
-    afl:[0,18,45,60,88,110,140,170,195,220,245,268],
-    nba:[0,10,28,35,60,78,95,120,140,158,180,205],
-    nfl:[0,8,20,30,42,55,70,82,100,118,135,150]
+    all:{tips:'1,708', d:[0,55,105,160,215,272,330,392,452,512,570,625,672,712,748,770,782.41]},
+    nrl:{tips:'612',   d:[0,18,40,62,88,112,138,162,188,212,235,258,275,290,302,308,312]},
+    afl:{tips:'498',   d:[0,15,34,55,78,98,120,142,165,185,205,222,238,250,260,265,268]},
+    nba:{tips:'421',   d:[0,10,24,38,55,72,90,108,125,140,155,168,180,190,198,203,205]},
+    nfl:{tips:'288',   d:[0,8,18,30,42,55,68,80,92,105,118,128,136,142,146,149,150]}
   };
-  var W=340,H=190,PL=8,PR=8,PT=12,PB=14;
+  var MONTHS=["Jan '25","Feb '25","Mar '25","Apr '25","May '25","Jun '25","Jul '25","Aug '25","Sep '25","Oct '25","Nov '25","Dec '25","Jan '26","Feb '26","Mar '26","Apr '26","May '26"];
+  var W=360,H=232,PADL=30,PADR=10,PADT=12,PADB=34;
   var svg=document.querySelector('.equity'); if(!svg) return;
-  var line=svg.querySelector('.line'), area=svg.querySelector('.area'), grid=svg.querySelector('.grid');
-  function draw(key){
-    var a=DATA[key]||DATA.all, n=a.length, max=Math.max.apply(null,a)||1;
-    var X=function(i){return PL+(W-PL-PR)*(i/(n-1));}, Y=function(v){return PT+(H-PT-PB)*(1-v/max);};
+  var line=svg.querySelector('.line'), area=svg.querySelector('.area'), grid=svg.querySelector('.grid'),
+      yl=svg.querySelector('.ylabels'), xl=svg.querySelector('.xlabels'), pbg=svg.querySelector('.plotbg');
+  var tipsEl=document.getElementById('eq-tips'), unitsEl=document.getElementById('eq-units'), labelEl=document.getElementById('eq-label');
+  var pL=PADL,pR=W-PADR,pT=PADT,pB=H-PADB;
+  pbg.setAttribute('x',pL);pbg.setAttribute('y',pT);pbg.setAttribute('width',pR-pL);pbg.setAttribute('height',pB-pT);
+  function scale(m){ if(m<=200) return {top:200,step:100}; return {top:Math.ceil(m/200)*200,step:200}; }
+  function fmt(v){ return v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+  function draw(key,label){
+    var o=DATA[key]||DATA.all, a=o.d, n=a.length, mx=Math.max.apply(null,a)||1, s=scale(mx);
+    var X=function(i){return pL+(pR-pL)*(i/(n-1));}, Y=function(v){return pT+(pB-pT)*(1-v/s.top);};
     var d=''; for(var i=0;i<n;i++){ d+=(i?'L':'M')+X(i).toFixed(1)+' '+Y(a[i]).toFixed(1); }
     line.setAttribute('d',d);
-    area.setAttribute('d', d+' L'+X(n-1).toFixed(1)+' '+(H-PB)+' L'+X(0).toFixed(1)+' '+(H-PB)+' Z');
-    var g=''; for(var k=0;k<=3;k++){ var gy=(PT+(H-PT-PB)*k/3).toFixed(1); g+='<line x1="'+PL+'" y1="'+gy+'" x2="'+(W-PR)+'" y2="'+gy+'"></line>'; }
-    grid.innerHTML=g;
+    area.setAttribute('d', d+' L'+X(n-1).toFixed(1)+' '+pB.toFixed(1)+' L'+X(0).toFixed(1)+' '+pB.toFixed(1)+' Z');
+    var g='', yy='';
+    for(var v=0; v<=s.top+0.1; v+=s.step){ var gy=Y(v);
+      g+='<line x1="'+pL+'" y1="'+gy.toFixed(1)+'" x2="'+pR+'" y2="'+gy.toFixed(1)+'"></line>';
+      yy+='<text class="ylabel" x="'+(pL-6)+'" y="'+(gy+3).toFixed(1)+'" text-anchor="end">'+v+'</text>';
+    }
+    grid.innerHTML=g; yl.innerHTML=yy;
+    var xx='';
+    for(var j=0;j<n;j+=2){ var px=X(j).toFixed(1), py=pB+12;
+      xx+='<text class="xlabel" x="'+px+'" y="'+py+'" text-anchor="end" transform="rotate(-42 '+px+' '+py+')">'+MONTHS[j]+'</text>';
+    }
+    xl.innerHTML=xx;
+    if(tipsEl) tipsEl.textContent=o.tips;
+    if(unitsEl) unitsEl.textContent='+'+fmt(a[n-1]);
+    if(labelEl) labelEl.textContent=label||'All sports';
   }
-  draw('all');
+  draw('all','All sports');
   var tabs=document.getElementById('perf-tabs');
   if(tabs){ tabs.addEventListener('click',function(e){ var b=e.target.closest('.tab'); if(!b) return;
     Array.prototype.forEach.call(tabs.querySelectorAll('.tab'),function(t){t.classList.remove('active');});
-    b.classList.add('active'); draw(b.getAttribute('data-key')); }); }
+    b.classList.add('active'); draw(b.getAttribute('data-key'), b.textContent.trim()); }); }
 })();
 </script>
 </body>
