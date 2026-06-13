@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In Play Tips — Green Palette Variations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{ --teal:#2EE6B6; }
+  body{
+    background:#0a0a0a;color:#fff;
+    font-family:"Oswald","Arial Narrow",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;padding:34px 0 60px;
+  }
+  .page-head{text-align:center;margin-bottom:30px;padding:0 20px}
+  .page-head h1{font-family:"Anton",sans-serif;font-size:30px;letter-spacing:.04em;text-transform:uppercase}
+  .page-head p{color:#9a9a9a;font-size:14px;margin-top:8px;letter-spacing:.02em}
+
+  /* horizontal comparison board */
+  .board{
+    display:flex;gap:34px;align-items:flex-start;
+    overflow-x:auto;padding:10px 34px 30px;scroll-snap-type:x proximity;
+  }
+  .col{flex:0 0 auto;scroll-snap-align:center;text-align:center}
+  .pal-name{font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:16px;margin-bottom:4px}
+  .pal-hex{color:#8d8d8d;font-size:12px;margin-bottom:14px;letter-spacing:.04em}
+  .swatch{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:middle;margin-left:6px}
+
+  /* ---- iPhone frame ---- */
+  .phone{
+    width:390px;border-radius:52px;background:linear-gradient(#202024,#111114);
+    padding:12px;box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 0 1px #333 inset;position:relative;
+  }
+  .screen{background:#0a0a0a;border-radius:42px;overflow:hidden;position:relative}
+  .island{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:116px;height:32px;background:#000;border-radius:18px;z-index:30}
+
+  /* status bar */
+  .statusbar{display:flex;justify-content:space-between;align-items:center;padding:16px 26px 8px;font-size:15px;font-weight:600}
+  .statusbar .time{font-variant-numeric:tabular-nums}
+  .sb-icons{display:flex;align-items:center;gap:6px}
+  .sb-icons svg{display:block}
+
+  /* nav */
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:8px 16px 12px;gap:10px}
+  .navlogo{width:36px;height:36px;flex:0 0 auto}
+  .pill-signup{
+    font-family:"Oswald",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:13px;
+    background:var(--base);color:var(--btext);border:1.5px solid var(--base);border-radius:999px;
+    padding:9px 26px;cursor:pointer;box-shadow:0 0 12px var(--glow),0 0 24px var(--glow-soft);
+  }
+  .ham{
+    width:40px;height:40px;flex:0 0 auto;border:1.5px solid var(--base);border-radius:11px;
+    background:rgba(255,255,255,.02);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;
+    box-shadow:0 0 10px var(--glow-soft);
+  }
+  .ham span{width:18px;height:2px;background:var(--base);border-radius:2px;box-shadow:0 0 6px var(--glow-soft)}
+
+  /* outer glowing frame */
+  .frame{
+    margin:6px 14px 18px;border:1.5px solid var(--base);border-radius:26px;padding:22px 18px 16px;
+    background:linear-gradient(180deg,rgba(255,255,255,.015),rgba(0,0,0,.2));
+    box-shadow:0 0 18px var(--glow-soft),inset 0 0 26px rgba(0,0,0,.45);position:relative;overflow:hidden;
+  }
+
+  .eyebrow{
+    font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.28em;font-size:12px;
+    color:var(--base);text-shadow:0 0 10px var(--glow-soft);margin-bottom:12px;
+  }
+  .headline{
+    font-family:"Anton",sans-serif;font-weight:400;text-transform:uppercase;color:#fff;
+    font-size:38px;line-height:.94;letter-spacing:.01em;margin-bottom:18px;
+  }
+  .btn{
+    display:block;width:100%;text-align:center;font-family:"Oswald",sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.08em;font-size:15px;border-radius:13px;padding:15px;cursor:pointer;margin-bottom:12px;
+  }
+  .btn-signup{background:var(--base);color:var(--btext);border:1.5px solid var(--base);
+    box-shadow:0 0 14px var(--glow),0 0 30px var(--glow-soft);}
+  .btn-results{background:#14130f;color:var(--base);border:1.5px solid var(--base);
+    box-shadow:0 0 12px var(--glow-soft);}
+
+  /* hero (athletes placeholder — stays gold/sepia, NOT recolored) */
+  .hero{
+    position:relative;height:200px;border-radius:16px;overflow:hidden;margin:6px 0 14px;
+    background:
+      radial-gradient(120% 80% at 30% 20%,rgba(255,255,255,.06),transparent 45%),
+      radial-gradient(90% 70% at 72% 60%,rgba(196,158,86,.18),transparent 55%),
+      radial-gradient(60% 50% at 50% 90%,rgba(120,100,60,.22),transparent 60%),
+      linear-gradient(180deg,#1b1813,#0e0c09);
+  }
+  .hero::before{ /* smoke */
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(40% 30% at 20% 30%,rgba(200,200,205,.10),transparent 60%),
+      radial-gradient(50% 40% at 80% 25%,rgba(180,180,185,.08),transparent 60%),
+      radial-gradient(45% 35% at 60% 80%,rgba(160,160,165,.07),transparent 60%);
+    mix-blend-mode:screen;
+  }
+  .hero-athletes{ /* faux athlete silhouettes in sepia */
+    position:absolute;inset:0;
+    background:
+      radial-gradient(22% 60% at 24% 75%,rgba(214,176,104,.55),transparent 62%),
+      radial-gradient(24% 70% at 52% 70%,rgba(224,188,120,.6),transparent 62%),
+      radial-gradient(22% 60% at 78% 76%,rgba(214,176,104,.5),transparent 62%);
+    filter:saturate(.7);
+  }
+  .hero-logo{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);width:96px;height:96px;z-index:2}
+
+  /* ticker */
+  .ticker{display:flex;gap:10px;overflow:hidden;padding-top:4px}
+  .tpill{
+    flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+    border:1.5px solid var(--base);border-radius:999px;padding:8px 14px;font-size:12px;font-weight:600;
+    background:rgba(0,0,0,.35);box-shadow:0 0 10px var(--glow-soft);
+  }
+  .tpill .lab{color:var(--base);font-family:"Oswald";font-weight:700;letter-spacing:.06em;text-shadow:0 0 8px var(--glow-soft)}
+  .tpill .sel{color:#fff}
+  .tpill .odd{color:var(--teal)}
+
+  @media(max-width:480px){ .page-head h1{font-size:22px} }
+</style>
+</head>
+<body>
+  <div class="page-head">
+    <h1>In Play Tips — Green Palette Variations</h1>
+    <p>Same landing page, five green accent schemes. Scroll sideways to compare. (Athlete block + IPT logo stay as-is; only the accent hue changes.)</p>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <!-- inline green IPT logo (stays green on every phone) -->
+  <svg width="0" height="0" style="position:absolute"><defs>
+    <linearGradient id="iptGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9dff45"/><stop offset=".55" stop-color="#39d65a"/><stop offset="1" stop-color="#0f9d4e"/>
+    </linearGradient>
+    <linearGradient id="iptSilver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef1f3"/><stop offset="1" stop-color="#9aa0a6"/>
+    </linearGradient>
+  </defs></svg>
+
+  <template id="logo">
+    <svg viewBox="0 0 100 100" aria-label="In Play Tips logo">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="url(#iptSilver)" stroke-width="5"/>
+      <path d="M50 16 L84 80 L16 80 Z" fill="none" stroke="url(#iptGreen)" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M42 40 h13 a9 9 0 0 1 0 18 h-13 z M42 40 v28" fill="none" stroke="url(#iptGreen)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="38" cy="36" r="3" fill="url(#iptGreen)"/>
+    </svg>
+  </template>
+
+  <script>
+    const palettes = [
+      { name:"Emerald",     base:"#10B981", glow:"#34D399", darkFill:false },
+      { name:"Neon Lime",   base:"#39FF14", glow:"#7CFC00", darkFill:false },
+      { name:"Deep Forest", base:"#1B7A3D", glow:"#2E9E4F", darkFill:true  },
+      { name:"Jade",        base:"#00C896", glow:"#2EE6B6", darkFill:false },
+      { name:"Chartreuse",  base:"#AEEA00", glow:"#C6FF00", darkFill:false },
+    ];
+    function rgba(hex,a){const h=hex.replace('#','');const n=parseInt(h,16);
+      return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;}
+    const logoSVG = document.getElementById('logo').innerHTML;
+
+    function phone(p){
+      const btext = p.darkFill ? "#ffffff" : "#0a0a0a";
+      const vars = `--base:${p.base};--glow:${p.glow};--glow-soft:${rgba(p.glow,.45)};--btext:${btext}`;
+      return `
+      <div class="col">
+        <div class="pal-name">${p.name}<span class="swatch" style="background:${p.base}"></span></div>
+        <div class="pal-hex">base ${p.base} &nbsp;•&nbsp; glow ${p.glow}</div>
+        <div class="phone" style="${vars}">
+          <div class="island"></div>
+          <div class="screen">
+            <div class="statusbar">
+              <span class="time">3:44</span>
+              <span class="sb-icons">
+                <svg width="18" height="12" viewBox="0 0 18 12"><g fill="#fff">
+                  <rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/>
+                  <rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1" opacity=".4"/></g></svg>
+                <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="#fff" stroke-width="1.6"><path d="M2 4.5a9 9 0 0 1 13 0"/><path d="M4.5 7a5.5 5.5 0 0 1 8 0"/><circle cx="8.5" cy="9.6" r="1.1" fill="#fff" stroke="none"/></svg>
+                <svg width="26" height="13" viewBox="0 0 26 13"><rect x="1" y="1.5" width="21" height="10" rx="3" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.3"/><rect x="3" y="3.5" width="14" height="6" rx="1.5" fill="#fff"/><rect x="23" y="4.5" width="2" height="4" rx="1" fill="#fff" opacity=".6"/></svg>
+              </span>
+            </div>
+            <div class="nav">
+              <div class="navlogo">${logoSVG}</div>
+              <button class="pill-signup">Sign up</button>
+              <button class="ham"><span></span><span></span><span></span></button>
+            </div>
+            <div class="frame">
+              <div class="eyebrow">In Play Tips</div>
+              <h1 class="headline">Australia's Sharpest Betting Insight</h1>
+              <button class="btn btn-signup">Sign up</button>
+              <button class="btn btn-results">Our results</button>
+              <div class="hero">
+                <div class="hero-athletes"></div>
+                <div class="hero-logo">${logoSVG}</div>
+              </div>
+              <div class="ticker">
+                <span class="tpill"><b class="lab">NRL</b><span class="sel">Panthers -4.5</span><span class="odd">+2.40u</span></span>
+                <span class="tpill"><b class="lab">AFL</b><span class="sel">Collingwood +12</span><span class="odd">+1.50u</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    }
+    document.getElementById('board').innerHTML = palettes.map(phone).join('');
+  </script>
+</body>
+</html>
