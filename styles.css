@@ -318,3 +318,5 @@ section{padding:34px 0}
 .inc-feats li::before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;background:var(--gold)}
 .inc-feats li::after{content:"";position:absolute;left:6px;top:7px;width:6px;height:3px;border-left:2px solid #1f1726;border-bottom:2px solid #1f1726;transform:rotate(-45deg)}
 .inc-desc{color:var(--muted);font-size:13px;line-height:1.6;margin-top:4px}
+/* Hero composite image */
+.hero-players .hero-comp{display:block;width:100%;max-width:360px;height:auto;margin:0 auto;opacity:1}
