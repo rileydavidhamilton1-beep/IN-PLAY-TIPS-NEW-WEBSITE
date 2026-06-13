@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>In Play Tips — Australia's Sharpest Betting Insight</title>
-<link rel="stylesheet" href="styles.css?v=56">
+<link rel="stylesheet" href="styles.css?v=57">
 </head>
 <body>
 
@@ -281,6 +281,46 @@
   if(tabs){ tabs.addEventListener('click',function(e){ var b=e.target.closest('.tab'); if(!b) return;
     Array.prototype.forEach.call(tabs.querySelectorAll('.tab'),function(t){t.classList.remove('active');});
     b.classList.add('active'); draw(b.getAttribute('data-key'), b.textContent.trim()); }); }
+})();
+</script>
+<!-- Sign-up plan modal -->
+<div class="modal" id="signupModal" aria-hidden="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Choose your plan">
+    <button class="modal__x" type="button" data-close aria-label="Close">&times;</button>
+    <div class="modal__eyebrow">In Play Tips</div>
+    <h3 class="modal__title">Choose your plan</h3>
+    <p class="modal__sub">Tips delivered in units so they scale to any bankroll. Cancel anytime.</p>
+    <!-- PLACEHOLDER prices &mdash; set your real pricing -->
+    <div class="plans">
+      <button class="plan" type="button" data-plan="weekly">
+        <span class="plan__l"><span class="plan__name">Weekly</span><span class="plan__feat">All daily tips + bet tracker</span></span>
+        <span class="plan__r"><span class="plan__price">$39</span><span class="plan__per">/week</span></span>
+      </button>
+      <button class="plan featured" type="button" data-plan="monthly">
+        <span class="plan__badge">Most popular</span>
+        <span class="plan__l"><span class="plan__name">Monthly</span><span class="plan__feat">Save vs weekly + priority support</span></span>
+        <span class="plan__r"><span class="plan__price">$119</span><span class="plan__per">/month</span></span>
+      </button>
+      <button class="plan" type="button" data-plan="quarterly">
+        <span class="plan__l"><span class="plan__name">Quarterly</span><span class="plan__feat">Best value &middot; locked-in rate</span></span>
+        <span class="plan__r"><span class="plan__price">$299</span><span class="plan__per">/quarter</span></span>
+      </button>
+    </div>
+    <p class="modal__note">18+. Gamble responsibly. Cancel anytime, no lock-in.</p>
+  </div>
+</div>
+<script>
+/* Sign-up plan modal: opens from any primary "Sign up" button */
+(function(){
+  var modal=document.getElementById('signupModal'); if(!modal) return;
+  function open(e){ if(e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function close(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  Array.prototype.forEach.call(document.querySelectorAll('.btn-primary'),function(b){ b.addEventListener('click',open); });
+  modal.addEventListener('click',function(e){ if(e.target.hasAttribute('data-close')) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && modal.classList.contains('open')) close(); });
+  /* plan buttons — wire each to your real sign-up/checkout link when ready */
+  Array.prototype.forEach.call(modal.querySelectorAll('.plan'),function(pl){ pl.addEventListener('click',function(){ /* TODO: checkout for pl.dataset.plan */ }); });
 })();
 </script>
 </body>
