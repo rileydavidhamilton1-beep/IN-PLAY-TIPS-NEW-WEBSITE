@@ -86,7 +86,7 @@ section{padding:34px 0}
 .hero-btns{display:flex;flex-direction:column;gap:14px;margin-bottom:8px}
 .hero-btns .btn{border-radius:8px;height:58px;font-size:15px}
 .hero-players{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:center;
-  gap:0;margin-top:18px;margin-left:-22px;margin-right:-22px;padding-bottom:46px}
+  gap:0;margin-top:10px;margin-left:-22px;margin-right:-22px;padding-bottom:46px}
 .hero-players img{height:200px;width:auto;object-fit:contain;
   filter:drop-shadow(0 18px 24px rgba(0,0,0,.5))}
 .hero-players img.mid{height:240px;margin:0 -22px;z-index:3}
@@ -319,6 +319,6 @@ section{padding:34px 0}
 .inc-feats li::after{content:"";position:absolute;left:6px;top:7px;width:6px;height:3px;border-left:2px solid #1f1726;border-bottom:2px solid #1f1726;transform:rotate(-45deg)}
 .inc-desc{color:var(--muted);font-size:13px;line-height:1.6;margin-top:4px}
 /* Hero composite image */
-.hero-players .hero-comp{display:block;width:100%;max-width:none;height:auto;margin:0;opacity:1;filter:none}
+.hero-players .hero-comp{display:block;width:100%;max-width:none;height:auto;margin:-38% 0 0;opacity:1;filter:none}
 /* includes accent bar */
 .inc-accent{width:46px;height:3px;background:var(--gold);border-radius:2px;margin:14px 0 18px;box-shadow:0 0 14px rgba(255,205,7,.5)}
