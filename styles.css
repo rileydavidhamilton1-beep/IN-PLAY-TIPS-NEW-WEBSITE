@@ -9,8 +9,8 @@
   --border:rgba(57,255,20,.10); --gold:#39FF14; --gold2:#7CFC00; --muted:#a9a0b2; --gold-rgb:124,252,0; --btn-text:#1f1726;
   --soft-gold:#7CFC00; --soft-gold2:#aaff66; --white:#fff;
   --win:#198754; --loss:#dc3545;
-  --head:"Bebas Neue","Anton",sans-serif;
-  --body:"Inter","Roboto",helvetica,arial,sans-serif;
+  --head:"Anton",sans-serif;
+  --body:"Titling Gothic FB Extended","Roboto",helvetica,arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
