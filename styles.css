@@ -398,6 +398,36 @@ section{padding:34px 0}
 .step h3{font-family:var(--head);text-transform:uppercase;font-size:18px;letter-spacing:.02em;line-height:1;color:var(--white);margin-bottom:5px}
 .step p{color:var(--muted);font-size:13px;line-height:1.5}
 @media(min-width:560px){.value-grid{margin-left:auto;margin-right:auto;max-width:520px}}
+/* Results page — KPI cards */
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 14px 0}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:15px 16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 14px 38px rgba(0,0,0,.4)}
+.kpi .k-val{font-family:var(--head);font-size:30px;line-height:1;color:var(--white)}
+.kpi .k-val.pos{color:var(--soft-gold)}
+.kpi .k-label{display:block;margin-top:8px;font-family:var(--body);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--muted)}
+/* Results page — monthly bar chart */
+.barchart .xlabel{fill:var(--muted);font-family:var(--body);font-size:9px}
+.barchart .zero{stroke:rgba(255,255,255,.22);stroke-width:1}
+.barchart .gl{stroke:rgba(255,255,255,.06);stroke-width:1}
+.barchart .ylabel{fill:var(--muted);font-family:var(--body);font-size:9px}
+.bar-legend{display:flex;justify-content:center;gap:18px;margin-top:10px;font-size:11px;color:var(--muted)}
+.bar-legend span{display:inline-flex;align-items:center;gap:6px}
+.bar-legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.bar-legend i.up{background:linear-gradient(180deg,#6CFF45,#27D40A)}
+.bar-legend i.down{background:#c4424d}
+/* Results page — settled tips ledger */
+.ledger{display:flex;flex-direction:column;gap:10px;margin:16px 14px 0}
+.ledger-row{display:flex;align-items:center;gap:11px;background:var(--panel);border:1px solid var(--border);
+  border-radius:14px;padding:12px 13px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 10px 26px rgba(0,0,0,.35)}
+.lr-sport{flex:0 0 auto;font-family:var(--body);font-weight:700;font-size:9.5px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--gold);border:1px solid var(--border);border-radius:999px;padding:5px 9px}
+.lr-main{flex:1 1 auto;min-width:0}
+.lr-sel{display:block;color:var(--white);font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lr-meta{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.lr-badge{flex:0 0 auto;font-family:var(--body);font-weight:700;font-size:10px;letter-spacing:.05em;
+  text-transform:uppercase;padding:5px 10px;border-radius:8px}
+.lr-badge.win{color:#0c2b0c;background:linear-gradient(180deg,#6CFF45,#27D40A)}
+.lr-badge.loss{color:#fff;background:rgba(196,66,77,.9)}
 /* ---------- Full-screen nav menu ---------- */
 .navmenu{position:fixed;inset:0;z-index:400;display:flex;flex-direction:column;opacity:0;visibility:hidden;pointer-events:none;
   transition:opacity .25s ease,visibility .25s ease;

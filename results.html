@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Results — In Play Tips</title>
-<link rel="stylesheet" href="styles.css?v=89">
+<link rel="stylesheet" href="styles.css?v=90">
 </head>
 <body>
 
@@ -36,61 +36,70 @@
 <div class="wrap">
 
   <!-- Intro -->
-  <section class="about">
-    <div class="section-head"><h2>Results</h2>
-      <p class="lead">A transparent look at our verified performance. Figures are based on
-        $100 units across all sports and racing. Placeholder data &mdash; swap for your real figures.</p>
-    </div>
+  <section class="about-intro smoke">
+    <span class="eyebrow">Results</span>
+    <h1>The receipts.</h1>
+    <p class="lead">A transparent look at our performance &mdash; every figure based on $100 units across all sports
+      and racing. Placeholder data; swap for your real numbers.</p>
   </section>
 
-  <!-- Key stat strip -->
-  <div class="statstrip">
-    <div class="ss-item"><span class="ss-val">1,708</span><span class="ss-label">Tips</span></div>
-    <div class="ss-item"><span class="ss-val">78.42%</span><span class="ss-label">Hit Rate</span></div>
-    <div class="ss-item"><span class="ss-val pos">782.41</span><span class="ss-label">Units Profit</span></div>
+  <!-- KPI cards -->
+  <div class="kpi-grid">
+    <div class="kpi"><span class="k-val">1,708</span><span class="k-label">Tips posted</span></div>
+    <div class="kpi"><span class="k-val">78.42%</span><span class="k-label">Hit rate</span></div>
+    <div class="kpi"><span class="k-val pos">+782.41</span><span class="k-label">Units profit</span></div>
+    <div class="kpi"><span class="k-val pos">+18.4%</span><span class="k-label">ROI</span></div>
   </div>
 
-  <!-- $100 bettor return -->
-  <div class="stats" style="margin-top:14px">
-    <div class="stat-row"><span class="stat-label"><span class="stat-ico"></span>$100 bettor return</span><span class="stat-val pos">$78,241.00</span></div>
-  </div>
-
-  <!-- Performance chart -->
+  <!-- Monthly profit bar chart -->
   <section id="performance">
-    <div class="section-head"><h2>Performance</h2>
-      <p class="lead">Cumulative units over the season.</p>
-    </div>
-    <div class="tabs" id="perf-tabs">
-      <button class="tab active" type="button" data-key="all">All sports</button>
+    <div class="section-head"><h2>Profit by month</h2>
+      <p class="lead">Net units won each month across the season.</p>
     </div>
     <div class="graph-card">
-      <div class="equity-head">
-        <div class="eq-row"><span class="eq-k">Tips</span><span class="eq-v" id="eq-tips">1,708</span></div>
-        <div class="eq-row"><span class="eq-k">Units profit</span><span class="eq-v pos" id="eq-units">+782.41</span></div>
-      </div>
-      <svg class="equity" viewBox="0 0 360 262" role="img" aria-label="Cumulative units chart">
-        <defs><linearGradient id="equityFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#39FF14" stop-opacity="0.30"/>
-          <stop offset="100%" stop-color="#39FF14" stop-opacity="0"/>
-        </linearGradient></defs>
-        <rect class="plotbg" x="0" y="0" width="0" height="0"></rect>
-        <g class="grid"></g>
-        <g class="ylabels axis"></g>
-        <g class="xlabels axis"></g>
-        <path class="area" d=""></path>
-        <path class="line" d=""></path>
+      <svg class="barchart" viewBox="0 0 360 240" role="img" aria-label="Net units by month">
+        <defs>
+          <linearGradient id="barPos" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#6CFF45"/><stop offset="100%" stop-color="#27D40A"/>
+          </linearGradient>
+          <linearGradient id="barNeg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e0606b"/><stop offset="100%" stop-color="#b23440"/>
+          </linearGradient>
+        </defs>
+        <g class="gls"></g>
+        <g class="yls"></g>
+        <g class="bars"></g>
+        <line class="zero" x1="0" y1="0" x2="0" y2="0"></line>
+        <g class="xls"></g>
       </svg>
+      <div class="bar-legend"><span><i class="up"></i>Winning month</span><span><i class="down"></i>Losing month</span></div>
     </div>
   </section>
 
+  <!-- Recent settled tips ledger -->
+  <section>
+    <div class="section-head"><h2>Recent settled tips</h2>
+      <p class="lead">A sample of how every tip is logged and settled. Placeholder &mdash; replace with your real ledger.</p>
+    </div>
+    <div class="ledger">
+      <div class="ledger-row"><span class="lr-sport">NRL</span><span class="lr-main"><span class="lr-sel">Panthers &minus;6.5</span><span class="lr-meta">@ 1.92 &middot; 2u &middot; 12 Jun</span></span><span class="lr-badge win">Won</span></div>
+      <div class="ledger-row"><span class="lr-sport">NBA</span><span class="lr-main"><span class="lr-sel">Nuggets / Wolves Over 221.5</span><span class="lr-meta">@ 1.90 &middot; 1.5u &middot; 11 Jun</span></span><span class="lr-badge win">Won</span></div>
+      <div class="ledger-row"><span class="lr-sport">Racing</span><span class="lr-main"><span class="lr-sel">R6 Flemington &mdash; No.4</span><span class="lr-meta">@ 3.40 &middot; 1u &middot; 11 Jun</span></span><span class="lr-badge loss">Lost</span></div>
+      <div class="ledger-row"><span class="lr-sport">AFL</span><span class="lr-main"><span class="lr-sel">Geelong line &minus;13.5</span><span class="lr-meta">@ 1.88 &middot; 2u &middot; 10 Jun</span></span><span class="lr-badge win">Won</span></div>
+      <div class="ledger-row"><span class="lr-sport">Soccer</span><span class="lr-main"><span class="lr-sel">Man City to win &amp; BTTS</span><span class="lr-meta">@ 2.10 &middot; 1u &middot; 09 Jun</span></span><span class="lr-badge win">Won</span></div>
+    </div>
+  </section>
 
   <!-- How verified -->
-  <section>
+  <section class="values-sec">
     <div class="section-head"><h2>How the numbers are verified</h2></div>
-    <ul class="verify-list">
-      <li>Every tip logged before kickoff</li>
-      <li>Settled against closing lines</li>
-      <li>Full history visible to members</li>
+    <ul class="steps">
+      <li class="step"><span class="step-dot"></span><h3>Logged before kickoff</h3>
+        <p>Every tip is posted to the community before the event starts &mdash; nothing added after the fact.</p></li>
+      <li class="step"><span class="step-dot"></span><h3>Settled against closing lines</h3>
+        <p>Each result is graded honestly once the event finishes, wins and losses both.</p></li>
+      <li class="step"><span class="step-dot"></span><h3>Open to every member</h3>
+        <p>The full history stays visible inside the community &mdash; not cherry-picked screenshots.</p></li>
     </ul>
   </section>
 
@@ -154,41 +163,34 @@
 })();
 </script>
 <script>
-/* Performance equity curve (placeholder data) */
+/* Monthly profit bar chart (placeholder data) */
 (function(){
-  var DATA={ all:{tips:'1,708', d:[0,55,105,160,215,272,330,392,452,512,570,625,672,712,748,770,782.41]} };
-  var MONTHS=["Jan '25","Feb '25","Mar '25","Apr '25","May '25","Jun '25","Jul '25","Aug '25","Sep '25","Oct '25","Nov '25","Dec '25","Jan '26","Feb '26","Mar '26","Apr '26","May '26"];
-  var W=360,H=262,PADL=38,PADR=16,PADT=14,PADB=62;
-  var svg=document.querySelector('.equity'); if(!svg) return;
-  var line=svg.querySelector('.line'), area=svg.querySelector('.area'), grid=svg.querySelector('.grid'),
-      yl=svg.querySelector('.ylabels'), xl=svg.querySelector('.xlabels'), pbg=svg.querySelector('.plotbg');
-  var tipsEl=document.getElementById('eq-tips'), unitsEl=document.getElementById('eq-units'), labelEl=document.getElementById('eq-label');
+  var MONTHS=["Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun"];
+  var V=[58,44,61,-9,67,52,70,63,-5,59,71,48]; /* net units per month — placeholder */
+  var svg=document.querySelector('.barchart'); if(!svg) return;
+  var W=360,H=240,PADL=26,PADR=12,PADT=14,PADB=40;
   var pL=PADL,pR=W-PADR,pT=PADT,pB=H-PADB;
-  pbg.setAttribute('x',pL);pbg.setAttribute('y',pT);pbg.setAttribute('width',pR-pL);pbg.setAttribute('height',pB-pT);
-  function scale(m){ if(m<=200) return {top:200,step:100}; return {top:Math.ceil(m/200)*200,step:200}; }
-  function fmt(v){ return v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-  function draw(key,label){
-    var o=DATA[key]||DATA.all, a=o.d, n=a.length, mx=Math.max.apply(null,a)||1, s=scale(mx);
-    var X=function(i){return pL+(pR-pL)*(i/(n-1));}, Y=function(v){return pT+(pB-pT)*(1-v/s.top);};
-    var d=''; for(var i=0;i<n;i++){ d+=(i?'L':'M')+X(i).toFixed(1)+' '+Y(a[i]).toFixed(1); }
-    line.setAttribute('d',d);
-    area.setAttribute('d', d+' L'+X(n-1).toFixed(1)+' '+pB.toFixed(1)+' L'+X(0).toFixed(1)+' '+pB.toFixed(1)+' Z');
-    var g='', yy='';
-    for(var v=0; v<=s.top+0.1; v+=s.step){ var gy=Y(v);
-      g+='<line x1="'+pL+'" y1="'+gy.toFixed(1)+'" x2="'+pR+'" y2="'+gy.toFixed(1)+'"></line>';
-      yy+='<text class="ylabel" x="'+(pL-6)+'" y="'+(gy+3).toFixed(1)+'" text-anchor="end">'+v+'</text>';
-    }
-    grid.innerHTML=g; yl.innerHTML=yy;
-    var xx='';
-    for(var j=0;j<n;j+=2){ var px=X(j).toFixed(1), py=pB+12;
-      xx+='<text class="xlabel" x="'+px+'" y="'+py+'" text-anchor="end" transform="rotate(-42 '+px+' '+py+')">'+MONTHS[j]+'</text>';
-    }
-    xl.innerHTML=xx;
-    if(tipsEl) tipsEl.textContent=o.tips;
-    if(unitsEl) unitsEl.textContent='+'+fmt(a[n-1]);
-    if(labelEl) labelEl.textContent=label||'All sports';
+  var minV=Math.min.apply(null,V.concat([0])), maxV=Math.max.apply(null,V.concat([0]));
+  var top=Math.ceil(maxV/20)*20, bot=Math.floor(minV/20)*20; if(top===bot) top+=20;
+  var Y=function(v){ return pT+(pB-pT)*(1-(v-bot)/(top-bot)); };
+  var zeroY=Y(0), n=V.length, slot=(pR-pL)/n, bw=slot*0.56;
+  var bars=svg.querySelector('.bars'), gls=svg.querySelector('.gls'), yls=svg.querySelector('.yls'),
+      xls=svg.querySelector('.xls'), zero=svg.querySelector('.zero');
+  var g='', yy='';
+  for(var v=bot; v<=top+0.1; v+=20){ var gy=Y(v);
+    g+='<line class="gl" x1="'+pL+'" y1="'+gy.toFixed(1)+'" x2="'+pR+'" y2="'+gy.toFixed(1)+'"></line>';
+    yy+='<text class="ylabel" x="'+(pL-5)+'" y="'+(gy+3).toFixed(1)+'" text-anchor="end">'+v+'</text>';
   }
-  draw('all','All sports');
+  gls.innerHTML=g; yls.innerHTML=yy;
+  zero.setAttribute('x1',pL); zero.setAttribute('x2',pR); zero.setAttribute('y1',zeroY.toFixed(1)); zero.setAttribute('y2',zeroY.toFixed(1));
+  var rr='', xx='';
+  for(var i=0;i<n;i++){
+    var cx=pL+slot*i+slot/2, val=V[i], pos=val>=0;
+    var y=Math.min(Y(val),zeroY), h=Math.max(Math.abs(Y(val)-zeroY),1.5);
+    rr+='<rect x="'+(cx-bw/2).toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="3" fill="url(#'+(pos?'barPos':'barNeg')+')"></rect>';
+    xx+='<text class="xlabel" x="'+cx.toFixed(1)+'" y="'+(pB+14)+'" text-anchor="middle">'+MONTHS[i]+'</text>';
+  }
+  bars.innerHTML=rr; xls.innerHTML=xx;
 })();
 </script>
 
