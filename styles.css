@@ -376,7 +376,7 @@ section{padding:34px 0}
 .navmenu__brand img{width:30px;height:30px}
 .navmenu__x{width:42px;height:42px;border:1.5px solid var(--gold);border-radius:11px;background:rgba(0,0,0,.4);color:var(--gold);font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 0 12px rgba(var(--gold-rgb),.4)}
 .navmenu__links{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 26px;gap:2px}
-.navmenu__links a{display:flex;align-items:center;justify-content:space-between;font-family:var(--head);text-transform:uppercase;font-size:44px;line-height:1.04;color:#fff;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);transition:color .15s ease,padding-left .15s ease}
+.navmenu__links a{display:flex;align-items:center;justify-content:space-between;font-family:var(--head);text-transform:uppercase;font-size:44px;line-height:1.04;color:#fff;text-decoration:none;padding:13px 0;transition:color .15s ease,padding-left .15s ease}
 .navmenu__links a .num{font-size:13px;color:var(--gold);font-family:var(--body);letter-spacing:.1em;align-self:flex-start;margin-top:6px;opacity:.7}
 .navmenu__links a:hover,.navmenu__links a:active{color:var(--gold);padding-left:8px;text-shadow:0 0 16px rgba(var(--gold-rgb),.5)}
 .navmenu__foot{padding:22px 26px calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;gap:16px;border-top:1px solid var(--border)}
