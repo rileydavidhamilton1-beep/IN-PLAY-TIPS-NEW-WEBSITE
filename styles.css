@@ -386,3 +386,4 @@ section{padding:34px 0}
 .navmenu__social a:hover{box-shadow:0 0 16px rgba(var(--gold-rgb),.4)}
 .navmenu__handle{color:var(--muted);font-size:13px;letter-spacing:.04em}
 .navmenu__note{color:var(--muted);font-size:11px}
+.navmenu__logo{height:46px;width:auto;margin-top:6px;opacity:.95}
