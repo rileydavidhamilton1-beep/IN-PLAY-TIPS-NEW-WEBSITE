@@ -7,7 +7,31 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Packages — In Play Tips</title>
-<link rel="stylesheet" href="styles.css?v=92">
+<link rel="stylesheet" href="styles.css?v=93">
+<!-- ============================================================
+     ANALYTICS  —  REPLACE THE PLACEHOLDER IDS BELOW
+     1) Google Analytics 4: swap G-XXXXXXXXXX for your Measurement ID
+        (analytics.google.com -> Admin -> Data Streams)
+     2) Microsoft Clarity (free heatmaps + recordings):
+        swap CLARITY_ID for your project ID (clarity.microsoft.com)
+     Until replaced, these do nothing.
+============================================================ -->
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "CLARITY_ID");
+</script>
 </head>
 <body>
 
@@ -51,16 +75,20 @@
         <span class="pkg-badge">Most popular</span>
         <div class="pkg-name">Quarterly</div>
         <div class="pkg-price">$PRICE<small>/qtr</small></div>
+        <div class="pkg-save">Save ~15% vs monthly</div>
         <ul class="pkg-feats"><li>Everything in Monthly</li><li>Priority support</li><li>Save vs monthly</li></ul>
         <button class="btn btn-primary" type="button">Sign up</button>
       </div>
       <div class="pkg-card">
         <div class="pkg-name">Annual</div>
         <div class="pkg-price">$PRICE<small>/yr</small></div>
+        <div class="pkg-save">Save ~25% vs monthly</div>
         <ul class="pkg-feats"><li>Everything in Quarterly</li><li>Best value</li><li>Locked-in rate</li></ul>
         <button class="btn btn-primary" type="button">Sign up</button>
       </div>
     </div>
+
+    <div class="pkg-guarantee"><span>Cancel anytime</span><span>No lock-in</span><span>Instant access</span></div>
 
     <!-- What's included -->
     <div class="includes-card">

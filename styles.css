@@ -340,6 +340,25 @@ section{padding:34px 0}
 .modal__reassure{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:16px;font-size:11.5px;color:var(--muted)}
 .modal__reassure span{display:inline-flex;align-items:center;gap:5px}
 .modal__reassure span::before{content:"✓";color:var(--soft-gold);font-weight:700}
+/* CRO — member reviews */
+.reviews{display:flex;flex-direction:column;gap:12px;margin:16px 14px 0}
+.review-card{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 14px 38px rgba(0,0,0,.4)}
+.review-stars{color:#ffc83d;font-size:13px;letter-spacing:1px;text-shadow:0 0 8px rgba(255,200,61,.35)}
+.review-card p{color:var(--white);font-size:13.5px;line-height:1.55;margin:8px 0 13px}
+.review-who{display:flex;align-items:center;gap:10px}
+.review-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#6CFF45,#0e7a06);
+  display:flex;align-items:center;justify-content:center;font-family:var(--head);color:#0c2b0c;font-size:15px;flex:0 0 auto}
+.review-name{font-weight:700;font-size:12.5px;color:var(--white)}
+.review-meta{font-size:11px;color:var(--muted)}
+.review-verified{margin-left:auto;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--soft-gold);
+  border:1px solid rgba(var(--gold-rgb),.35);border-radius:999px;padding:4px 9px}
+/* CRO — packages savings + guarantee */
+.pkg-save{margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--soft-gold);text-transform:uppercase}
+.pkg-guarantee{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px 14px 0}
+.pkg-guarantee span{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--white);
+  background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:999px;padding:7px 12px}
+.pkg-guarantee span::before{content:"✓";color:var(--soft-gold);font-weight:700}
 /* ---------- Section dividers + scroll reveal ---------- */
 .about,#performance,.skeptical,#packages,.faq-section{border-top:1px solid var(--border)}
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
