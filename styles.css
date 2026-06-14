@@ -309,6 +309,37 @@ section{padding:34px 0}
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(12,10,9,0),rgba(12,10,9,.94) 32%);transform:translateY(130%);transition:transform .25s ease;pointer-events:none}
 .sticky-cta.show{transform:translateY(0);pointer-events:auto}
 @media(min-width:760px){.sticky-cta{display:none}}
+.sticky-cta__in{display:flex;align-items:center;gap:12px;max-width:520px;margin:0 auto}
+.sticky-cta__txt{flex:1;line-height:1.12;min-width:0}
+.sticky-cta__txt strong{display:block;font-family:var(--head);text-transform:uppercase;font-size:17px;letter-spacing:.02em;color:var(--white)}
+.sticky-cta__txt span{font-size:11px;color:var(--muted)}
+.sticky-cta .btn{width:auto;flex:0 0 auto;height:46px;padding:0 24px;font-size:13px}
+/* CRO — hero subheadline */
+.hero-sub{color:var(--muted);font-size:14px;line-height:1.5;margin:2px 0 14px;max-width:340px}
+.hero-inner .rating{justify-content:flex-start;margin:0 0 18px}
+/* CRO — social proof rating */
+.rating{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 0 16px;flex-wrap:wrap}
+.rating .stars{color:#ffc83d;font-size:15px;letter-spacing:1px;text-shadow:0 0 10px rgba(255,200,61,.4)}
+.rating .rtxt{font-size:12px;color:var(--muted)}
+.rating .rtxt b{color:var(--white);font-weight:600}
+/* CRO — trust/benefit badges */
+.trust-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.trust-badges span{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.02em;
+  color:var(--white);background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:999px;padding:6px 11px}
+.trust-badges span::before{content:"";width:13px;height:13px;border-radius:50%;background:var(--gold);flex:0 0 auto;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2l-3.5-3.5L4 14.2 9 19.2 20 8.2l-1.5-1.5z'/%3E%3C/svg%3E") center/12px no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2l-3.5-3.5L4 14.2 9 19.2 20 8.2l-1.5-1.5z'/%3E%3C/svg%3E") center/12px no-repeat}
+/* CRO — urgency banner */
+.urgency{display:flex;align-items:center;justify-content:center;gap:8px;margin:14px;padding:10px 14px;border-radius:12px;
+  background:linear-gradient(180deg,rgba(57,255,20,.08),rgba(57,255,20,.03));border:1px solid rgba(var(--gold-rgb),.3);
+  font-size:12.5px;color:var(--white);text-align:center}
+.urgency .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(var(--gold-rgb),.7);animation:pulse 1.6s infinite;flex:0 0 auto}
+.urgency b{color:var(--soft-gold)}
+/* CRO — modal reassurance */
+.modal__sub{color:var(--muted);font-size:13px;margin:-8px 0 16px;text-align:center}
+.modal__reassure{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:16px;font-size:11.5px;color:var(--muted)}
+.modal__reassure span{display:inline-flex;align-items:center;gap:5px}
+.modal__reassure span::before{content:"✓";color:var(--soft-gold);font-weight:700}
 /* ---------- Section dividers + scroll reveal ---------- */
 .about,#performance,.skeptical,#packages,.faq-section{border-top:1px solid var(--border)}
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}

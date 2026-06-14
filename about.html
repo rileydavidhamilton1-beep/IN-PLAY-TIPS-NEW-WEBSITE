@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>About — In Play Tips</title>
-<link rel="stylesheet" href="styles.css?v=91">
+<link rel="stylesheet" href="styles.css?v=92">
 </head>
 <body>
 
@@ -155,6 +155,15 @@
   </div>
 </footer>
 
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta__in">
+    <div class="sticky-cta__txt"><strong>Get today's tips</strong><span>5+ daily &middot; cancel anytime</span></div>
+    <button class="btn btn-primary" type="button">Sign up</button>
+  </div>
+</div>
+<script>(function(){var el=document.getElementById('stickyCta');if(!el)return;function on(){if(window.scrollY>500)el.classList.add('show');else el.classList.remove('show');}window.addEventListener('scroll',on,{passive:true});on();})();</script>
+
 <!-- Sign-up plan modal -->
 <div class="modal" id="signupModal" aria-hidden="true">
   <div class="modal__backdrop" data-close></div>
@@ -162,6 +171,7 @@
     <button class="modal__x" type="button" data-close aria-label="Close">&times;</button>
     <div class="modal__eyebrow">In Play Tips</div>
     <h3 class="modal__title">Choose your plan</h3>
+    <p class="modal__sub">Instant access. Cancel anytime, no lock-in.</p>
     <!-- PLACEHOLDER prices &mdash; set your real pricing -->
     <div class="plans">
       <button class="plan" type="button" data-plan="weekly">
@@ -178,6 +188,7 @@
         <span class="plan__r"><span class="plan__price">$299</span><span class="plan__per">/quarter</span></span>
       </button>
     </div>
+    <div class="modal__reassure"><span>Cancel anytime</span><span>Instant access</span><span>18+ &middot; bet responsibly</span></div>
   </div>
 </div>
 <script>
