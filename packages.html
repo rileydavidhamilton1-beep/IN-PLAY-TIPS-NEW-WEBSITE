@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Packages — In Play Tips</title>
-<link rel="stylesheet" href="styles.css?v=66">
+<link rel="stylesheet" href="styles.css?v=67">
 </head>
 <body>
 
@@ -28,7 +28,7 @@
   <div class="header-inner">
     <a class="header-logo" href="index.html" aria-label="In Play Tips home"><img src="logo.png" alt="logo"></a>
     <button class="btn btn-primary" type="button">Sign up</button>
-    <a class="hamburger" href="index.html" aria-label="Home"><span></span><span></span><span></span></a>
+    <button class="hamburger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -130,6 +130,44 @@
   Array.prototype.forEach.call(document.querySelectorAll('.btn-primary'),function(b){ b.addEventListener('click',open); });
   modal.addEventListener('click',function(e){ if(e.target.hasAttribute('data-close')) close(); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape' && modal.classList.contains('open')) close(); });
+})();
+</script>
+
+
+<!-- Full-screen nav menu -->
+<div class="navmenu" id="navMenu" aria-hidden="true">
+  <div class="navmenu__head">
+    <a class="navmenu__brand" href="index.html"><img src="logo.png" alt="">In Play Tips</a>
+    <button class="navmenu__x" type="button" data-navclose aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="navmenu__links">
+    <a href="index.html">Home<span class="num">01</span></a>
+    <a href="results.html">Results<span class="num">02</span></a>
+    <a href="packages.html">Packages<span class="num">03</span></a>
+    <a href="about.html">About<span class="num">04</span></a>
+  </nav>
+  <div class="navmenu__foot">
+    <button class="btn btn-primary navmenu__cta" type="button">Sign up</button>
+    <div class="navmenu__social">
+      <a href="#" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v9.6a3.4 3.4 0 1 1-3-3.38V11a1.6 1.6 0 1 0 1.2 1.55V3h1.85A4.4 4.4 0 0 0 17.4 6.3V8.2A6.1 6.1 0 0 1 14 6.9z"/></svg></a>
+      <a href="https://www.instagram.com/in.play.tips" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg></a>
+    </div>
+    <div class="navmenu__handle">@in.play.tips</div>
+    <div class="navmenu__note">18+. Gamble responsibly.</div>
+  </div>
+</div>
+<script>
+/* Full-screen nav menu */
+(function(){
+  var menu=document.getElementById('navMenu'); if(!menu) return;
+  function open(){ menu.classList.add('open'); menu.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function close(){ menu.classList.remove('open'); menu.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  Array.prototype.forEach.call(document.querySelectorAll('.hamburger'),function(h){ h.addEventListener('click',function(e){ e.preventDefault(); open(); }); });
+  menu.addEventListener('click',function(e){
+    if(e.target.closest('[data-navclose]') || e.target.closest('.navmenu__links a') || e.target.closest('.navmenu__cta')){ close(); }
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && menu.classList.contains('open')) close(); });
 })();
 </script>
 
