@@ -10,7 +10,7 @@
   --soft-gold:#7CFC00; --soft-gold2:#aaff66; --white:#fff;
   --win:#198754; --loss:#dc3545;
   --head:"Anton",sans-serif;
-  --body:"Titling Gothic FB Extended","Roboto",helvetica,arial,sans-serif;
+  --body:Arial,Helvetica,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
