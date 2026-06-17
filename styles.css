@@ -316,7 +316,7 @@ section{padding:34px 0}
 .sticky-cta .btn{width:auto;flex:0 0 auto;height:46px;padding:0 24px;font-size:13px}
 /* CRO — hero subheadline */
 .hero-sub{color:var(--muted);font-size:14px;line-height:1.5;margin:2px 0 14px;max-width:340px}
-.hero-inner .rating{justify-content:flex-start;margin:0 0 18px}
+.hero-inner .rating{justify-content:center;margin:14px 0 0}
 /* CRO — social proof rating */
 .rating{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 0 16px;flex-wrap:wrap}
 .rating .stars{color:#ffc83d;font-size:15px;letter-spacing:1px;text-shadow:0 0 10px rgba(255,200,61,.4)}
