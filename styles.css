@@ -522,6 +522,9 @@ section{padding:34px 0}
    not boxes. Overrides the card system above.
    ============================================================ */
 
+/* ---- Lock page horizontally: no side-to-side panning on mobile ---- */
+html,body{overflow-x:clip;max-width:100%}
+@supports not (overflow:clip){html,body{overflow-x:hidden}}
 /* ---- Atmosphere: layered emerald glow + grain, no visible edges ---- */
 body{background:
   radial-gradient(900px 520px at 50% -120px, rgba(51,224,106,.11), transparent 62%),
