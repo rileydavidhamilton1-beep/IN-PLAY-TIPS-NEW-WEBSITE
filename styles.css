@@ -544,9 +544,11 @@ h1,h2,h3,.head{font-style:italic;color:var(--mint);letter-spacing:.005em}
 .eyebrow{color:var(--gold);font-weight:700}
 
 /* ---- Section rhythm: whitespace instead of dividers ---- */
-section{padding:56px 0}
+section{padding:30px 0}
+section:has(.features){padding:6px 0}
+.features{margin:0}
 #performance,.skeptical,#packages,.faq-section,.values-sec{border-top:0}
-.values-sec{padding-top:56px}
+.values-sec{padding-top:30px}
 .footer{border-top:1px solid var(--hairline);background:none;margin-top:40px}
 
 /* ---- HERO: no container, typography + glow carry it ---- */
@@ -670,8 +672,8 @@ section{padding:56px 0}
 
 /* ---- Desktop scale-up: editorial spacing + bigger type ---- */
 @media(min-width:760px){
-  section{padding:120px 0}
-  .values-sec{padding-top:120px}
+  section{padding:56px 0}
+  .values-sec{padding-top:56px}
   .hero h1{font-size:100px}
   .hero-btns{gap:26px;align-items:center}
   .hero-btns .btn-ghost{min-width:0;margin:0}
