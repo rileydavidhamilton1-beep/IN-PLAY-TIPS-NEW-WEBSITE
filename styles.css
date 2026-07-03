@@ -561,7 +561,9 @@ section{padding:56px 0}
 .hero-players::before{content:"";position:absolute;left:50%;top:58%;transform:translate(-50%,-50%);
   width:110%;height:72%;border-radius:50%;filter:blur(46px);pointer-events:none;
   background:radial-gradient(closest-side,rgba(var(--gold-rgb),.15),transparent 72%)}
-.hero-players .hero-comp{position:relative;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
+.hero-players .hero-comp{position:relative;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55));
+  -webkit-mask:linear-gradient(180deg,#000 72%,rgba(0,0,0,.4) 88%,transparent 100%);
+  mask:linear-gradient(180deg,#000 72%,rgba(0,0,0,.4) 88%,transparent 100%)}
 .hero-inner .rating{margin-top:16px}
 
 /* ---- Buttons: solid neon pill primary, text-link secondary ---- */
@@ -644,7 +646,9 @@ section{padding:56px 0}
 .cta{background:none;border:0;border-radius:0;overflow:visible;padding:26px 2px;position:relative}
 .cta::before{content:"";position:absolute;left:-10%;top:0;width:80%;height:100%;pointer-events:none;
   background:radial-gradient(closest-side,rgba(var(--gold-rgb),.10),transparent 72%);filter:blur(30px)}
-.cta-graphic{filter:drop-shadow(0 18px 34px rgba(0,0,0,.5))}
+.cta-graphic{filter:drop-shadow(0 18px 34px rgba(0,0,0,.5));
+  -webkit-mask:linear-gradient(180deg,#000 70%,rgba(0,0,0,.35) 88%,transparent 100%);
+  mask:linear-gradient(180deg,#000 70%,rgba(0,0,0,.35) 88%,transparent 100%)}
 .legal a{background:none;border:1px solid var(--hairline)}
 
 /* ---- About/Results intro: open editorial hero ---- */
