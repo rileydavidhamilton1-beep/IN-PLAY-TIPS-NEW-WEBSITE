@@ -569,7 +569,9 @@ section:has(.features){padding:6px 0}
 .hero-players .hero-comp{position:relative;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55));
   -webkit-mask:linear-gradient(180deg,#000 72%,rgba(0,0,0,.4) 88%,transparent 100%);
   mask:linear-gradient(180deg,#000 72%,rgba(0,0,0,.4) 88%,transparent 100%)}
-.hero-inner .rating{margin-top:16px}
+.hero-inner .rating{margin:26px 0 34px}
+.rating .stars{font-size:20px;letter-spacing:2px}
+.rating .rtxt{font-size:14.5px}
 
 /* ---- Buttons: solid neon pill primary, text-link secondary ---- */
 .btn{border-radius:999px;border:0;font-weight:700}
